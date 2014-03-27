@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_ca_notice"
+        android:layout_width="800dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notice_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <!-- config title -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_ca_title"
+                style="@style/Small"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="@string/dvb_config"
+                android:textColor="@drawable/black" />
+        </LinearLayout>
+
+        <!-- dvb version -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:layout_marginLeft="40dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="180dip"
+                android:layout_height="50dip"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:text="@string/dvb_config_version"
+                android:textColor="@drawable/white" />
+
+            <TextView
+                android:id="@+id/tv_dvb_version"
+                style="@style/Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:textColor="@drawable/white" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/devider" />
+
+        <!-- tuner id -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:layout_marginLeft="40dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="180dip"
+                android:layout_height="50dip"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:text="@string/dvb_config_id"
+                android:textColor="@drawable/white" />
+
+            <RadioGroup
+                android:id="@+id/rg_tunerid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_tuner_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/dvb_config_tuner_1" />
+
+                <RadioButton
+                    android:id="@+id/rb_tuner_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_tuner_2" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/devider" />
+        <!-- band width -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:layout_marginLeft="40dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="180dip"
+                android:layout_height="50dip"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:text="@string/dvb_config_bandwidth"
+                android:textColor="@drawable/white" />
+
+            <RadioGroup
+                android:id="@+id/rg_bandwidth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_bandwidth_6m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/dvb_config_bandwidth_6m" />
+
+                <RadioButton
+                    android:id="@+id/rb_bandwidth_8m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_bandwidth_8m" />
+
+                <RadioButton
+                    android:id="@+id/rb_bandwidth_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_bandwidth_other" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/devider" />
+        <!-- bat limit -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:layout_marginLeft="40dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="180dip"
+                android:layout_height="50dip"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:text="@string/dvb_config_bat"
+                android:textColor="@drawable/white" />
+
+            <RadioGroup
+                android:id="@+id/rg_bat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_bat_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/dvb_config_bat_limit" />
+
+                <RadioButton
+                    android:id="@+id/rb_bat_no_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_bat_no_limit" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/devider" />
+
+        <!-- default encoding -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:layout_marginLeft="40dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="180dip"
+                android:layout_height="50dip"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:text="@string/dvb_config_default_encode"
+                android:textColor="@drawable/white" />
+
+            <RadioGroup
+                android:id="@+id/rg_encode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_encode_gbk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/dvb_config_encode_gbk" />
+
+                <RadioButton
+                    android:id="@+id/rb_encode_big5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_encode_big5" />
+
+                <RadioButton
+                    android:id="@+id/rb_encode_unicode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_encode_unicode" />
+
+                <RadioButton
+                    android:id="@+id/rb_encode_utf8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_encode_utf8" />
+
+                <RadioButton
+                    android:id="@+id/rb_encode_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dvb_config_encode_other" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- ippv button -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="60dip"
+                android:layout_height="30dip"
+                android:background="@drawable/button_green" />
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_string_ok"
+                android:textColor="@drawable/white" />
+
+            <TextView
+                android:layout_width="60dip"
+                android:layout_height="30dip"
+                android:background="@drawable/button_red" />
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:text="@string/pvr_string_cancel"
+                android:textColor="@drawable/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/epg_service"
+    style="@style/Medium"
+    android:layout_width="350dip"
+    android:layout_height="45dip"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:paddingLeft="5dip"
+    android:singleLine="true"
+    android:textColor="@drawable/epg_text_color" />

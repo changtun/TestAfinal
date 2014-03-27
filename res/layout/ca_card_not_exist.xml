@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/CaTopLL" >
+
+        <TextView
+            android:id="@+id/ca_card_title"
+            style="@style/titleText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="480dip"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ca_card_info"
+            android:textColor="@drawable/white" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/CaBottomLL" >
+
+        <TextView
+            style="@style/XSmall"
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:background="@drawable/ca_back"
+            android:gravity="center"
+            android:text="@string/ca_back"
+            android:textColor="@drawable/black" />
+
+        <TextView
+            style="@style/Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dip"
+            android:text="@string/ca_leave"
+            android:textColor="@drawable/white" />
+    </LinearLayout>
+
+</LinearLayout>

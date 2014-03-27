@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/CaTopLL" >
+
+        <TextView
+            style="@style/titleText"
+            android:text="@string/ca_authInfo" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="900dip"
+        android:layout_height="480dip"
+        android:layout_gravity="center" >
+
+        <ListView
+            android:id="@+id/ca_auth_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/select_l_focus" />
+
+        <TextView
+            android:id="@+id/error_tv"
+            style="@style/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ca_card_info"
+            android:textColor="@drawable/white"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/ca_ppv_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/select_l_focus"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/ca_ippv_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/select_l_focus"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout style="@style/CaBottomLL" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:gravity="right" >
+
+            <TextView
+                style="@style/XSmall"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:background="@drawable/ca_back"
+                android:gravity="center"
+                android:text="@string/ca_back"
+                android:textColor="@drawable/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:gravity="right" >
+
+            <ImageView
+                style="@style/RemindImage"
+                android:background="@drawable/button_blue"
+                android:contentDescription="@string/ca_ppid_ppv" />
+
+            <TextView
+                style="@style/RemindText"
+                android:text="@string/ca_ppid_ppv" />
+
+            <ImageView
+                style="@style/RemindImage"
+                android:background="@drawable/button_green"
+                android:contentDescription="@string/ca_ppid_ippv" />
+
+            <TextView
+                style="@style/RemindText"
+                android:text="@string/ca_ppid_ippv" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

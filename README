@@ -1,0 +1,4 @@
+★ Test Afinal 框架
+ 导入DVB代码，加入finaldb jar包，
+1.FinalDB
+	2014-03-27   修改将搜索结果存入数据库的逻辑，测试finaldb

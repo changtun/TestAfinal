@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        style="@style/CaTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dip"
+        android:text="@string/ca_dialog_title" />
+
+    <EditText
+        android:id="@+id/pin_pwd_et"
+        style="@style/CaPasswordEditText"
+        android:layout_width="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="20dip" >
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/CaBottomButton"
+            android:layout_weight="0"
+            android:text="@string/ca_dialog_confirm" >
+        </Button>
+
+        <Button
+            android:id="@+id/btn_dismiss"
+            style="@style/CaBottomButton"
+            android:layout_weight="0"
+            android:text="@string/ca_dialog_dismiss" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

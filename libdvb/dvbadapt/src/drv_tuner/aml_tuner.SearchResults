@@ -1,0 +1,5 @@
+---- I2C_TENBIT Matches (4 in 1 files) ----
+IBSP.c (avl63x1603):	  res = ioctl(i2c_fd,I2C_TENBIT,0);
+IBSP.c (avl63x1603):	  pbiinfo("[%s %d]ioctl I2C_TENBIT = %d\n",__FUNCTION__,__LINE__,res);
+IBSP.c (avl63x1603):	  res = ioctl(i2c_fd,I2C_TENBIT,0);
+IBSP.c (avl63x1603):	  pbiinfo("[%s %d]ioctl I2C_TENBIT = %d\n",__FUNCTION__,__LINE__,res);

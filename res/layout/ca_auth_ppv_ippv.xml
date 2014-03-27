@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ca_ppv_ippv_item"
+    style="@style/Medium"
+    android:layout_width="900dip"
+    android:layout_height="60dip"
+    android:ellipsize="marquee"
+    android:gravity="center_vertical"
+    android:paddingLeft="50dip"
+    android:singleLine="true"
+    android:textColor="@drawable/white" />

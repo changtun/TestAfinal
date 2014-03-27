@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/CaTopLL" >
+
+        <TextView
+            style="@style/titleText"
+            android:text="@string/ca_rateControl" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="480dip"
+        android:layout_gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/rate_set_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingTop="50dip" >
+
+                <TextView
+                    style="@style/CaLeftTextView"
+                    android:text="@string/ca_choice" />
+
+                <LinearLayout
+                    android:id="@+id/ll_rate_choice"
+                    android:layout_width="350dip"
+                    android:layout_height="60dip"
+                    android:background="@drawable/channel_play_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dip"
+                        android:src="@drawable/arrow_left" >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_ShowCALevel"
+                        style="@style/Medium"
+                        android:layout_width="230dip"
+                        android:layout_height="60dip"
+                        android:gravity="center"
+                        android:text="@string/ca_level_common" >
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dip"
+                        android:src="@drawable/arrow_right" >
+                    </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dip" >
+
+                <TextView
+                    style="@style/CaLeftTextView"
+                    android:text="@string/rate_password" />
+
+                <EditText
+                    android:id="@+id/et_rate_password"
+                    style="@style/CaPasswordEditText" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_tv"
+            style="@style/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ca_card_info"
+            android:textColor="@drawable/white"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout style="@style/CaBottomLL" >
+
+        <Button
+            android:id="@+id/bt_save_rate_modify"
+            style="@style/CaBottomButton"
+            android:text="@string/ca_ok" />
+    </LinearLayout>
+
+</LinearLayout>

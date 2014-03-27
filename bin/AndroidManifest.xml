@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pbi.dvb"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="1"
+    android:versionName="F865C-DVB-SX 20130925_1.0" >
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <supports-screens android:largeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.webkit.permission.PLUGIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- android:name=".global.CrashApplication" -->
+
+    <application
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/appName"
+        android:persistent="true"
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        <uses-library android:name="android.test.runner" />
+
+        <!-- pvr int the browser -->
+        <activity
+            android:name="com.pbi.dvb.nppvware.NpPvwareActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <service android:name="com.pbi.dvb.nppvware.NpPvwareService" >
+            <intent-filter>
+                <action android:name="android.webkit.PLUGIN" />
+            </intent-filter>
+
+            <meta-data
+                android:name="type"
+                android:value="native" />
+        </service>
+
+        <activity
+            android:name=".TVChannelSearch"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/ChannelSearch"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".TVChannelSearch"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ChannelSearchProgress"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ChannelSearchProgress" />
+        <activity
+            android:name=".TVChannelPlay"
+            android:clearTaskOnLaunch="true"
+            android:taskAffinity=".TVChannelPlay"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".SaveEditResultActivity" />
+        <activity android:name=".DVBConfigActivity" />
+        <activity android:name=".SearchFreqSettings" />
+        <activity android:name=".BootDefaultServiceActivity" />
+        <activity
+            android:name=".TVChannelEdit"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".TVChannelEdit" />
+        <activity
+            android:name=".EpgActivity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".EpgActivity" />
+        <activity android:name=".PVRActivity" />
+        <activity
+            android:name=".PvrOrderList"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".PvrOrderList" />
+        <activity
+            android:name=".PvrOrderInfos"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".PvrOrderInfos"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".PvrPlayList"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".PvrPlayList" />
+        <activity
+            android:name=".PvrPlay"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".PvrPlay"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ca.CaStateInfo"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.CaStateInfo" />
+        <activity
+            android:name=".ca.CaPasswordSet"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.CaPasswordSet"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ca.CaRateControl"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.CaRateControl"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ca.CaAuthInfo"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.CaAuthInfo"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".ca.CaAuthDetail"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.CaAuthDetail" />
+        <activity
+            android:name=".ca.CaEmail"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.CaEmail" />
+        <activity
+            android:name=".ca.CaEmailDetail"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.CaEmailDetail" />
+        <activity
+            android:name=".ca.PlayControlMain"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.PlayControlMain" />
+        <activity
+            android:name=".ca.PlayControlDetail"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".ca.PlayControlDetail"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".SplashActivity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Start LinKang, 2013-12-21, Add the definitions -->
+        <activity
+            android:name="com.pbi.dvb.SystemInfoActivity"
+            android:taskAffinity=".systemInfoActivity" >
+        </activity>
+        <activity
+            android:name="com.pbi.dvb.EitActivity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=".eitActivity" >
+        </activity>
+        <activity
+            android:name="com.pbi.dvb.TextScrollDialogActivity"
+            android:taskAffinity=".textScrollDialogActivity"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <!-- End LinKang, 2013-12-21, Add the definitions -->
+
+
+        <!-- Start LinKang, 2014-01-06, Add the definitions -->
+        <activity
+            android:name="com.pbi.dvb.ca.CaRateControlNew"
+            android:taskAffinity=".caRateControlNew" >
+        </activity>
+        <!-- End LinKang, 2014-01-06, Add the definitions -->
+
+        <provider
+            android:name=".provider.MailProvider"
+            android:authorities="com.pbi.dvb.provider.MailProvider" >
+        </provider>
+        <provider
+            android:name=".provider.ServiceProvider"
+            android:authorities="com.pbi.dvb.provider.ServiceProvider" >
+        </provider>
+        <provider
+            android:name=".provider.TPProvider"
+            android:authorities="com.pbi.dvb.provider.TPProvider" >
+        </provider>
+        <provider
+            android:name=".provider.PvrProvider"
+            android:authorities="com.pbi.dvb.provider.PvrProvider" >
+        </provider>
+
+        <!-- Add By LinKang start -->
+
+        <receiver android:name="com.pbi.dvb.receiver.OnBootupPvrReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pbi.dvb.receiver.OnPvrTaskCompleteReceiver" >
+            <intent-filter>
+                <action android:name="wojiushibujieshourenhederenwu" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.pbi.dvb.receiver.AlertTimeReceiver" >
+            <intent-filter>
+                <action android:name="com.pbi.dvb.alertCurrentTime" />
+            </intent-filter>
+        </receiver>
+        <!-- Wake up & Sleep -->
+        <!--
+             <receiver android:name=".receiver.BootUpLoadDriveReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <receiver android:name=".receiver.SleepBroadcastReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.ACTION_SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.SleepService" >
+            <intent-filter>
+                <action android:name=".service.SleepService" />
+            </intent-filter>
+        </service>
+        <!-- End -->
+
+        <service
+            android:name="com.pbi.dvb.service.PvrGlobalService"
+            android:process=".com.pbi.dvb.service.pvrGlobal" >
+        </service>
+        <service android:name="com.pbi.dvb.service.PvrBackgroundService" >
+            <intent-filter>
+                <action android:name="com.pbi.dvb.service.pvrBackgroudService" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <!-- android:process=".service.pvrRecord" -->
+        <service android:name="com.pbi.dvb.service.PvrRecordService" >
+            <intent-filter>
+                <action android:name="com.pbi.dvb.service.pvrRecordDialog" />
+            </intent-filter>
+        </service>
+        <service android:name="com.pbi.dvb.service.PvrInitService" >
+        </service>
+        <service android:name=".service.LoadDriveService" >
+            <intent-filter>
+                <action android:name="com.pbi.dvb.service.LoadDriveService" />
+            </intent-filter>
+        </service>
+        <!-- For User Behavior Survey Begin -->
+        <service android:name="com.pbi.dvb.service.UserBehaviorSurveyService" >
+        </service>
+        <service
+            android:name="com.pbi.dvb.service.WebViewManagerService"
+            android:process=".com.pbi.dvb.service.webViewManager" >
+        </service>
+        <service android:name="com.pbi.dvb.service.PiwikUserBehaviorSurveyService" >
+        </service>
+        <service
+            android:name="com.pbi.dvb.service.PiwikTrackerManagerService"
+            android:process=".com.pbi.dvb.service.piwikTrackerManager" >
+        </service>
+        <!-- For User Behavior Survey End -->
+
+
+        <!-- FOR OTA START -->
+        <activity android:name="com.pbi.dvb.OTADownloaderActivity" >
+        </activity>
+
+        <service android:name="com.pbi.dvb.service.OTADownloaderService" >
+            <intent-filter>
+                <action android:name="com.pbi.dvb.service.ota_downloader_service" />
+            </intent-filter>
+        </service>
+        <!-- FOR OTA END -->
+
+
+        <!-- Add By LinKang finished -->
+        <!-- factory test -->
+        <activity
+            android:name=".factorytest.FactoryTest"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".factorytest.AvPlayer"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".factorytest.FrontpanelActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="unspecified"
+            android:theme="@android:style/Theme.Dialog" />
+    </application>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Tests for My App"
+        android:targetPackage="com.pbi.dvb" >
+    </instrumentation>
+
+</manifest>

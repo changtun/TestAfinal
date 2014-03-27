@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:stretchColumns="*" >
+
+        <TextView
+            android:id="@+id/test_version"
+            android:layout_margin="2dip"
+            android:layout_weight="1"
+            android:background="#0000ff"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="@string/testversion"
+            android:textSize="40dip"
+            android:textStyle="bold" >
+        </TextView>
+
+        <TableRow
+            android:layout_margin="2dip"
+            android:background="#00ff00" >
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/factorytest1"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type1"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/factorytest2"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type2"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="2dip"
+            android:background="#00ff00" >
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/factorytest3"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type3"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/factorytest4"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type4"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="2dip"
+            android:background="#00ff00" >
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/factorytest7"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type5"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type6"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <!-- IP地址测试 -->
+
+        <TableRow
+            android:layout_margin="2dip"
+            android:background="#00ff00" >
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/ip_addr"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type7"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:gravity="left"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type8"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="2dip"
+            android:background="#00ff00" >
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:text="@string/dvb_tuner1_test"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type9"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:gravity="left"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="@string/tube"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type10"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_margin="2dip"
+            android:background="#00ff00" >
+
+            <LinearLayout
+                android:layout_margin="2dip"
+                android:ellipsize="marquee"
+                android:gravity="left"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true" >
+
+                <TextView
+                    android:id="@+id/factorytest_11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="2dip"
+                    android:layout_weight="0.41"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:text="@string/smart_card"
+                    android:textSize="40dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_type11"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                    android:background="#0000ff"
+                    android:focusable="false" />
+            </LinearLayout>
+	    
+	      <LinearLayout
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:singleLine="true" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/factorytest_12"
+                    android:layout_margin="2dip"
+                    android:layout_weight="1"
+                    android:background="#0000ff"
+                    android:ellipsize="marquee"
+                    android:gravity="left"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:textSize="40dip"
+                    android:textStyle="bold" 
+                      android:text="@string/frontpanel"/>
+
+                <TextView
+                    android:id="@+id/text_type12"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="10dp"
+                   android:background="#0000ff"
+                     android:focusable="false"/>
+            </LinearLayout>
+				
+	    
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="250dip"
+        android:layout_height="150dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/epg_border"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip" >
+
+        <SurfaceView
+            android:id="@+id/video"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+</LinearLayout>

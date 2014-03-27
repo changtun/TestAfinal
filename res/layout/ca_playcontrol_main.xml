@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/CaTopLL" >
+
+        <TextView
+            style="@style/titleText"
+            android:text="@string/ca_playControl" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="900dip"
+        android:layout_height="480dip"
+        android:layout_gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/play_main_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/control_set_btn"
+                style="@style/CaControlBtn"
+                android:nextFocusDown="@+id/control_query_btn"
+                android:text="@string/ca_control_set" />
+
+            <Button
+                android:id="@+id/control_query_btn"
+                style="@style/CaControlBtn"
+                android:nextFocusDown="@+id/control_cancel_btn"
+                android:nextFocusUp="@+id/control_set_btn"
+                android:text="@string/ca_control_query" />
+
+            <Button
+                android:id="@+id/control_cancel_btn"
+                style="@style/CaControlBtn"
+                android:nextFocusUp="@+id/control_query_btn"
+                android:text="@string/ca_control_cancel" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_tv"
+            style="@style/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ca_card_info"
+            android:textColor="@drawable/white"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout style="@style/CaBottomLL" >
+
+        <Button
+            android:id="@+id/play_control"
+            style="@style/CaBottomButton"
+            android:background="@drawable/button_search_selector"
+            android:text="@string/ca_back" />
+    </LinearLayout>
+
+</LinearLayout>

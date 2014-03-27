@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <!-- title、time显示 -->
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="50dip"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:src="@drawable/calendar" />
+
+            <com.pbi.dvb.view.TimeWidget style="@style/TitleTime" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="260dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ll_date"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_horizontal"
+                android:text="@string/ca_emailList"
+                android:textColor="@drawable/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/TitleClock"
+                android:src="@drawable/clock" />
+
+            <DigitalClock
+                style="@style/Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:paddingRight="60dip"
+                android:textColor="@drawable/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dip"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/ca_email_detail_title"
+            style="@style/Medium"
+            android:layout_width="550dip"
+            android:layout_height="fill_parent"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="@drawable/white" />
+
+        <TextView
+            style="@style/Medium"
+            android:layout_width="200dip"
+            android:layout_height="fill_parent"
+            android:gravity="right"
+            android:text="@string/email_detail_time"
+            android:textColor="@drawable/white" />
+
+        <TextView
+            android:id="@+id/ca_email_detail_time"
+            style="@style/Medium"
+            android:layout_width="350dip"
+            android:layout_height="fill_parent"
+            android:textColor="@drawable/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="9dip"
+        android:background="@drawable/devider"
+        android:padding="10dip" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="500dip"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/ca_email_detail_content"
+            style="@style/Small"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="50dip" />
+    </ScrollView>
+
+</LinearLayout>

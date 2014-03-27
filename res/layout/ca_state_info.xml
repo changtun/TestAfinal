@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/CaTopLL" >
+
+        <TextView
+            style="@style/titleText"
+            android:text="@string/ca_stateInfo" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="900dip"
+        android:layout_height="480dip"
+        android:layout_gravity="center" >
+
+        <ListView
+            android:id="@+id/ca_state_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/select_l_focus" />
+
+        <TextView
+            android:id="@+id/error_tv"
+            style="@style/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ca_card_info"
+            android:textColor="@drawable/white"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout style="@style/CaBottomLL" >
+
+        <TextView
+            style="@style/XSmall"
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:background="@drawable/ca_back"
+            android:gravity="center"
+            android:text="@string/ca_back"
+            android:textColor="@drawable/black" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="500dip"
+    android:layout_height="250dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_gravity="center"
+        android:background="@drawable/list_tit_bg"
+        android:gravity="center"
+        android:paddingLeft="20dip"
+        android:text="@string/password_title"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/settings_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_dialog_message"
+            android:layout_width="fill_parent"
+            android:layout_height="150dip"
+            android:gravity="left"
+            android:paddingLeft="20dip"
+            android:text="@string/viewing_level_control"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/info_bg"
+            android:drawableLeft="@drawable/button_red"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="100dip"
+            android:text="@string/viewing_level_control_remove"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</LinearLayout>

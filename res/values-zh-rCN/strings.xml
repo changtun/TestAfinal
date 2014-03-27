@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appName">数字电视</string>
+    <string name="ChannelNo">序号</string>
+    <string name="ChannelName">频道名称</string>
+    <string name="ChannelSearch">节目搜索</string>
+    <string name="sure">确认</string>
+    <string name="back">返回</string>
+    <string name="select">选择</string>
+    <string name="clear">删除</string>
+    <string name="page">翻页</string>
+    <string name="SearchType">搜索类型:</string>
+    <string name="AutoScan">自动搜索</string>
+    <string name="ManualScan">手动搜索</string>
+    <string name="SearchNow">立即搜索</string>
+    <string name="ModulationMode">调制方式(QAM):</string>
+    <string name="InputFrequency">输入频率(KHz):</string>
+    <string name="ModulationModeDefault">256 QAM</string>
+    <string name="InputFrequencyDefault">735000</string>
+    <string name="SymbolRate">符码率(Kbps):</string>
+    <string name="SymbolRateDefault">5210</string>
+    <string name="SignalStrength">信号强度</string>
+    <string name="SignalQuality">信号质量</string>
+    <string name="Mon">星期一</string>
+    <string name="Tue">星期二</string>
+    <string name="Wed">星期三</string>
+    <string name="Thr">星期四</string>
+    <string name="Fri">星期五</string>
+    <string name="Sat">星期六</string>
+    <string name="Sun">星期日</string>
+    <string name="ChannelSearchResult">搜索结果</string>
+    <string name="TV">电视</string>
+    <string name="Radio">广播</string>
+    <string name="AllChannels">所有节目:</string>
+    <string name="TVChannels">电视节目:</string>
+    <string name="RadioChannels">广播节目:</string>
+    <string name="TVChannel">电视节目</string>
+    <string name="RadioChannel">广播节目</string>
+    <string name="ChannelSearchProgress">搜索进度</string>
+    <string name="ChannelList">频道列表</string>
+    <string name="OK">确&#160;&#160;认</string>
+    <string name="Cancel">取&#160;&#160;消</string>
+    <string name="searchTips">提示</string>
+    <string name="PasswordTips">密码为4位数字</string>
+    <string name="channelNotice">很抱歉,您还没有节目!</string>
+    <string name="searchNotice">没有搜索到节目,您是否尝试重新搜索?</string>
+    <string name="search_freq_settings">頻點設置</string>
+    <string name="main_frequency">主頻點(KHz)</string>
+
+    <!-- Password Tips -->
+    <string name="password_title">提示资讯</string>
+    <string name="password_programme">请输入节目锁密码</string>
+    <string name="password_stb">输入机顶盒密码</string>
+    <string name="password_wrong_tips">密码错误请重新输入</string>
+    <string name="viewing_level_control">本节目收视级别管制中</string>
+    <string name="viewing_level_control_remove">按F1解除管制</string>
+    <string name="category_level_control">本节目类别-</string>
+    <string name="category_controlling">管制中</string>
+    <string name="category_movie">电影</string>
+    <string name="category_albums">影集</string>
+    <string name="category_soap">连剧</string>
+    <string name="category_variety">综艺</string>
+    <string name="category_music">音乐</string>
+    <string name="category_cognitivene">知性</string>
+    <string name="category_sports">体育</string>
+    <string name="category_cartoons">卡通</string>
+    <string name="category_news">新闻</string>
+    <string name="category_opera">戏曲</string>
+    <string name="category_other">其他</string>
+
+    <!-- CTI Ca Message -->
+    <string name="E00">E00&#160;&#160;非加密节目</string>
+    <string name="E01">E01&#160;&#160;请插入智能卡</string>
+    <string name="E02">E02&#160;&#160;无法识别智能卡</string>
+    <string name="E03">E03&#160;&#160;正在校验智能卡</string>
+    <string name="E04">E04&#160;&#160;无节目</string>
+    <string name="E05">E05&#160;&#160;子卡认证成功</string>
+    <string name="E06">E06&#160;&#160;智能卡OK</string>
+    <string name="E07">E07&#160;&#160;子卡认证失败</string>
+    <string name="E08">E08&#160;&#160;母卡认证失败</string>
+    <string name="E09"></string>
+    <string name="E10">E10&#160;&#160;无法识别的加密节目</string>
+    <string name="E11">E11&#160;&#160;区域码不匹配</string>
+    <string name="E12">E12&#160;&#160;机卡不匹配</string>
+    <string name="E13">E13&#160;&#160;父母锁级别太低</string>
+    <string name="E14">E14&#160;&#160;控制字错误</string>
+    <string name="E15">E15&#160;&#160;没有解密授权</string>
+    <string name="E16">E16&#160;&#160;成功解扰</string>
+    <string name="E17">E17&#160;&#160;子卡认证过期</string>
+    <string name="E18">E18&#160;&#160;用户禁播准播控制</string>
+    <string name="E19">E19&#160;&#160;区域禁播准播控制</string>
+    <string name="E20">E20&#160;&#160;IPPV节目</string>
+    <string name="E21">E21&#160;&#160;智能卡节目商授权被暂停</string>
+    <string name="E22">E22&#160;&#160;智能卡处于未激活状态</string>
+    <string name="E23">E23&#160;&#160;智能卡超出有效期</string>
+    <string name="E24">E24&#160;&#160;智能卡授权被暂停</string>
+    <string name="E25">E25&#160;&#160;分配ECM Channel失败</string>
+    <string name="E26">E26&#160;&#160;解扰通道分配失败</string>
+    <string name="E27">E27&#160;&#160;解扰时智能卡错误</string>
+    <string name="E28">E28&#160;&#160;节目状态错误</string>
+    <string name="E29">E29&#160;&#160;分配ECM Filter失败</string>
+    <string name="E30">E30&#160;&#160;PID切换失败</string>
+    <string name="E40">E40&#160;&#160;用户准禁播设置成功</string>
+    <string name="E41">E41&#160;&#160;用户准禁播数据读取成功</string>
+    <string name="E42">E42&#160;&#160;用户准禁播设置时间错误</string>
+    <string name="E43">E43&#160;&#160;用户准禁播控制时间超长</string>
+    <string name="E44">E44&#160;&#160;用户准禁播设置通道错误</string>
+    <string name="E45">E45&#160;&#160;用户准禁播设置模式错误</string>
+    <string name="E46">E46&#160;&#160;用户准禁播设置PIN码错误</string>
+    <string name="E47">E47&#160;&#160;用户准禁播设置失败</string>
+    <string name="E48"></string>
+    <string name="E49"></string>
+    <string name="E50">E50&#160;&#160;IPPV点播成功</string>
+    <string name="E51">E51&#160;&#160;IPPV密码错误</string>
+    <string name="E52">E52&#160;&#160;IPPV节目过期</string>
+    <string name="E53">E53&#160;&#160;IPPV点播金额不足</string>
+    <string name="E54">E54&#160;&#160;IPPV点播方式不支持</string>
+    <string name="E55">E55&#160;&#160;IPPV点播失败</string>
+    <string name="E56">E56&#160;&#160;IPPV结束成功</string>
+    <string name="E57">E57&#160;&#160;IPPV结束失败</string>
+
+    <!-- CTI Ca IPPV -->
+    <string name="cti_ippv_title">IPPV节目</string>
+    <string name="cti_ippv_tips">这是付费节目，您需要输入密码购买观看.</string>
+    <string name="cti_ippv_service_id">节目号：</string>
+    <string name="cti_ippv_company">节目运营商ID：</string>
+    <string name="cti_ippv_company_name">运营商名称：</string>
+    <string name="cti_ippv_purchase_way">购买方式：</string>
+    <string name="cti_ippv_purchase_by_channel_tips">一次性购买价格:</string>
+    <string name="cti_ippv_purchase_by_time_tips">按观看时间购买价格:</string>
+    <string name="cti_ippv_purchase_by_channel_unit">元</string>
+    <string name="cti_ippv_purchase_by_time_unit">元/分钟</string>
+    <string name="cti_ippv_by_channel">一次性购买</string>
+    <string name="cti_ippv_by_time">按时间购买</string>
+    <string name="cti_ippv_next_time">不购买节目</string>
+    <string name="cti_ippv_pin_code">输入密码：</string>
+    <string name="cti_ippv_status0">IPPV节目点播成功</string>
+    <string name="cti_ippv_status1">输入PIN码错误</string>
+    <string name="cti_ippv_status2">IPPV节目已过期</string>
+    <string name="cti_ippv_status3">卡內金额不足</string>
+    <string name="cti_ippv_status4">点播方式不支持</string>
+    <string name="cti_ippv_status5">点播失败</string>
+    <string name="cti_ippv_status6">IPPV停止成功</string>
+    <string name="cti_ippv_status7">IPPV停止失敗</string>
+    <string name="cti_ippv_status8">操作类型错误</string>
+
+    <!-- SoundTrack Settings -->
+    <string name="dvb_soundtrack_settings">声道设定</string>
+    <string name="dvb_st_language_selection">语言选择:</string>
+    <string name="dvb_st_soundtrack_selection">声道选择:</string>
+    <string name="dvb_st_soundtrack_stereo">立体声</string>
+    <string name="dvb_st_soundtrack_mix">混合</string>
+    <string name="dvb_st_soundtrack_left">左声道</string>
+    <string name="dvb_st_soundtrack_right">右声道</string>
+    <string name="dvb_soundtrack_tips">请按声道键退出</string>
+    <!-- Player Message -->
+    <string name="NoSignal">无信号</string>
+    <string name="ProgramInterrupt">节目中断</string>
+    <string name="NoPrograms">节目不存在</string>
+    <string name="NITUpdate">是否进行节目更新？</string>
+
+    <!-- Search Message -->
+    <string name="SaveProgram">正在保存节目内容,请稍候...</string>
+    <string name="no_program_auto_search">节目为空,是否自动搜索节目?</string>
+    <string name="auto_search_or_not">是否重新搜索节目,请确认 &#8230;</string>
+
+    <!-- Program Edit -->
+    <string name="ChannelEdit">节目编辑</string>
+    <string name="EditFav">喜爱</string>
+    <string name="EditMov">移动</string>
+    <string name="EditLock">锁定</string>
+    <string name="EditDel">删除</string>
+    <string name="EditDelAll">全部刪除</string>
+    <string name="AllPrograms">所有节目</string>
+    <string name="TVPrograms">电视节目</string>
+    <string name="BroadcastPrograms">广播节目</string>
+    <string name="FavPrograms">喜爱节目</string>
+    <string name="Programme_Password">请输入节目锁密码</string>
+    <string name="Parent_Child_Password">请输入亲子锁密码</string>
+    <string name="input_password_tips">密码不正确</string>
+    <string name="input_password_try_again">请再试一次</string>
+    <string name="Save_tips">是否保存编辑的信息？</string>
+
+    <!-- EPG -->
+    <string name="ChannelEpg">节目指南</string>
+     <string name="epg_current_name">当前节目资讯</string>       
+    <string name="epg_next_name">后续节目资讯</string>     
+    <string name="ca_current_name">当前节目:</string>
+    <string name="ca_cost_rate">费率:</string>
+    <string name="ca_introduction">节目简介:</string>
+    <string name="ca_buy">购买</string>
+    <string name="ca_exit">离开</string>
+    <string name="ca_notice">公告</string>
+    <string name="ca_reminder">提醒</string>
+    <string name="ca_ipp_purchase_success">购买成功!</string>
+    <string name="ca_ipp_purchase_fail">购买失败!</string>
+    <string name="ca_child_pwd">请输入儿童锁密码</string>
+    <string name="invilid_programme">无效节目!</string>
+
+    <!-- EPG -->
+    <string name="epg_title">节目指南</string>
+    <string name="today">今天</string>
+    <string name="progTime">节目时间</string>
+    <string name="progName">节目内容</string>
+    <string name="progOrder">预约</string>
+    <string name="channelProm">电视节目</string>
+    <string name="convertService">选择节目</string>
+    <string name="convertFocus">切换焦点</string>
+    <string name="convertEvent">切换指南信息</string>
+    <string name="convert7Day">切换EPG日期</string>
+    <string name="convertPvrOrder">预约录制</string>
+    <string name="convertPlayOrder">预约播放</string>
+    <string name="rate_normal">普</string>
+    <string name="rate_protect">保</string>
+    <string name="rate_assist">辅</string>
+    <string name="rate_adult">限</string>
+    <string name="rate_special">成</string>
+
+    <!-- PVR -->
+    <string name="end_pvr1">节目录制:</string>
+    <string name="end_pvr2">是否结束？</string>
+    <string name="end_tms">是否结束时光平移？</string>
+    <string name="pvr_start">播放</string>
+    <string name="pvr_stop">停止</string>
+    <string name="pvr_pause">暂停</string>
+    <string name="pvr_rec">&#183;REC</string>
+    <string name="pvr_ts">&#183;TMS</string>
+    <string name="hdd_no">无法找到外接存储设备</string>
+    <string name="hdd_notEnough">存储空间不足</string>
+    <string name="pvr_recording">正在录制，无法提供其它服务</string>
+    <string name="free_space">2000</string>
+    <string name="min_space">100</string>
+    <string name="pvr_play_title">PVR播放</string>
+    <string name="pvr_title">预约管理</string>
+    <string name="pvr_number">序号</string>
+    <string name="pvr_mode">模式</string>
+    <string name="pvr_wake">唤醒方式</string>
+    <string name="pvr_service_name">唤醒频道</string>
+    <string name="pvr_set_date">日期</string>
+    <string name="pvr_start_time">开始时间</string>
+    <string name="pvr_time_length">时长</string>
+    <string name="pvr_standby">预约结束后待机</string>
+    <string name="standby_yes">是</string>
+    <string name="standby_no">否</string>
+    <string name="mode_off">关</string>
+    <string name="mode_onetime">一次</string>
+    <string name="mode_perday">每日</string>
+    <string name="mode_perweek">每周</string>
+    <string name="mode_wrokingday">工作日</string>
+    <string name="wake_record">录影</string>
+    <string name="wake_play">播放</string>
+    <string name="pvr_save_fail_null">保存失败，各信息项不能为空</string>
+    <string name="pvr_save_fail_format">保存失败，日期或时间数据的格式或内容不正确</string>
+    <string name="pvr_save_success">保存成功</string>
+    <string name="pvr_orderfull_info">预约已满，请删除不再使用的预约记录!</string>
+    <string name="pvr_play_eof">播放到文件尾</string>
+    <string name="pvr_play_sof">回退到文件头</string>
+    <string name="pvr_play_inner_error">播放內部错误</string>
+    <string name="pvr_disk_full">磁盘已满</string>
+    <string name="pvr_inner_error">录制内部错误</string>
+    <string name="pvr_length">录制长度达到指定长度</string>
+    <string name="pvr_speed">磁盘存储速度慢于录制速度</string>
+    <string name="pvr_delete_file_tips">是否删除当前文件？</string>
+
+    <!-- CA -->
+    <string name="ca_title">条件接收</string>
+
+    <!-- 算通CA 2013.05.06 -->
+    <string name="ca_stateInfo">收视卡基本资讯</string>
+    <string name="ca_authInfo">运营商资讯</string>
+    <string name="ca_emailList">电视信箱</string>
+    <string name="ca_PasswordSet">密码设定</string>
+    <string name="ca_rateControl">成人级别设置</string>
+    <string name="ca_playControl">用户准播/禁播</string>
+    <string name="stateInfo">CA状态信息</string>
+    <string name="smart_no">智能卡号&#058;</string>
+    <string name="smart_version">智能卡版本&#058;</string>
+    <string name="ca_version">CA版本&#058;</string>
+    <string name="ca_rate">观看级别&#058;</string>
+    <string name="rate_message">观看级别,请输入4到18之间的数字！</string>
+    <string name="password_message">请输入长度是4位的密码！</string>
+    <string name="password_set">密码设定</string>
+    <string name="password_old">输入密码&#058;</string>
+    <string name="password_new">请输入新密码&#058;</string>
+    <string name="password_new_again">请确认新密码&#058;</string>
+    <string name="password_new_error">兩次新密碼輸入不一致，請重新輸入！</string>
+    <string name="password_success">密码设定保存成功！</string>
+    <string name="password_fail">密码设定保存失败！</string>
+    <string name="rate_control">成人级控制</string>
+    <string name="rate_input">输入级别(4..18)&#058;</string>
+    <string name="rate_password">输入密码&#058;</string>
+    <string name="rate_success">成人级控制保存成功！</string>
+    <string name="rate_fail">成人级控制保存失败！</string>
+    <string name="auth_info">授权信息</string>
+    <string name="auth_normal">普通授权信息</string>
+    <string name="auth_ipp">IPP授权信息</string>
+    <string name="auth_wallet">电子钱包</string>
+    <string name="auth_consume">IPP消费记录</string>
+    <string name="normal_productID">产品ID</string>
+    <string name="normal_state">授权状态</string>
+    <string name="normal_date">授权日期</string>
+    <string name="normal_authOk">授权正常</string>
+    <string name="normal_authParamError">参数错误</string>
+    <string name="normal_authWithout">没有授权</string>
+    <string name="normal_authRestrict">授权受限</string>
+    <string name="normal_authClose">授权关闭</string>
+    <string name="normal_authPause">授权暂停</string>
+    <string name="ipp_ID">序号</string>
+    <string name="ipp_type">类型</string>
+    <string name="ipp_startTime">开始时间</string>
+    <string name="ipp_endTime">结束时间</string>
+    <string name="ipp_type_ippv">ippv</string>
+    <string name="ipp_type_ippt">ippt</string>
+    <string name="wallet_ID">钱包ID</string>
+    <string name="wallet_credit">信用度</string>
+    <string name="wallet_remain">剩余点数</string>
+    <string name="consume_id">序号</string>
+    <string name="consume_time">时间</string>
+    <string name="consume_state">状态</string>
+    <string name="consume_number">流水号</string>
+    <string name="consume_money">金额</string>
+    <string name="consume_store">存入</string>
+    <string name="consume_pay">支出</string>
+    <string name="email_list">邮件列表</string>
+    <string name="email_no">序号</string>
+    <string name="email_status">状态</string>
+    <string name="email_title">标题</string>
+    <string name="email_receiveTime">接收时间</string>
+    <string name="email_delete">删除</string>
+    <string name="email_received">已收到邮件：</string>
+    <string name="email_space">剩余空间：</string>
+    <string name="email_detail_time">接收时间：</string>
+    <string name="email_unread">未读</string>
+    <string name="email_read">已读</string>
+    <string name="email_delete_one">确认删除下述邮件吗？</string>
+    <string name="email_delete_all">确认删除全部邮件吗？</string>
+    <string name="email_full_front">邮箱已满，还有</string>
+    <string name="email_full_behind">个邮件未显示，请删除邮件!</string>
+    <string name="email_info_remind_one">删除单条记录</string>
+    <string name="email_info_remind_all">删除全部记录</string>
+    <string name="ca_back">返回</string>
+    <string name="ca_leave">离开</string>
+    <string name="ca_ok">确认</string>
+    <string name="ca_cancel">取消</string>
+    <string name="caState_introduction">显示CA状态信息</string>
+    <string name="auth_introduction">显示普通授权、IPP授权、电子钱包信息</string>
+    <string name="ca_card_info">智能卡不存在,请插入智能卡！</string>
+    <string name="zimu_card_feeding">子母卡喂养</string>
+    <string name="zimu_input_mu">请插入母卡,并按确认键!</string>
+    <string name="zimu_input_zi">请插入子卡,并按确认键!</string>
+    <string name="zimu_success">喂养成功!</string>
+    <string name="zimu_fail_mu">读取母卡数据错误,喂养失败!</string>
+    <string name="zimu_fail_zi">写子卡数据错误,喂养失败!</string>
+
+    <!-- RecordSetting -->
+    <string name="RecordSetting">录影设置</string>
+    <string name="RecordMode">模式</string>
+    <string name="ModeDefault">关闭</string>
+    <string name="WakeUPMode">唤醒方式</string>
+    <string name="WakeUPModeDefault">录影</string>
+    <string name="WakeChannel">唤醒频道</string>
+    <string name="RecordDate">日期</string>
+    <string name="RecordTime">时间</string>
+    <string name="RecordLength">录影长度</string>
+    <string name="save">保存</string>
+    <string name="cancle">取消</string>
+
+    <!-- Add by LinKang for pvr time up dialog -->
+    <string name="pvr_string_ok">确认</string>
+    <string name="pvr_string_cancel">取消</string>
+    <string name="pvr_string_record_notice">确定要开始录制节目:</string>
+    <string name="pvr_string_close_notice">提示:点击确定会关闭当前应用, 退回主界面.</string>
+    <string name="pvr_string_play_notice">确定要开始播放节目:</string>
+    <string name="pvr_hdd_notEnough_notice">清空磁盘空间后开始录制</string>
+    <string name="pvr_hdd_no_notice">请插入U盘、SD卡等存储设备后开始录制</string>
+    <string name="pvr_time_invalid">预约设置的时间不能小于当前时间</string>
+    <string name="pvr_time_conflict">当前预约的时间和已有任务有冲突\n预约时间的间隔不能小于量分钟</string>
+    <string name="pvr_time_suspend_notice">是否进入待机?</string>
+    <!-- Add by LinKang for pvr time up dialog -->
+
+    <!-- Add by LinKang for OTA dialog begin -->
+    <string name="ota">OTA</string>
+    <string name="ota_receive_update_message_notice">检测到新的升级包, 是否立刻下载?\n\n点击确定将退回首页, 并暂时停止DVB其它服务</string>
+    <string name="ota_error_notice">OTA下载异常, 重启后重新下载</string>
+    <string name="ota_downloader_notice">正在进行OTA下载, 暂时不能提供DVB其它服务, 下载完毕后可恢复服务.</string>
+    <string name="ota_download_finished">OTA下载完成, 点击确定将开始执行升级. 升级过程中会重启机顶盒并持续数分钟.</string>
+    <!-- Add by LinKang for OTA dialog end -->
+    <!-- 2013.05.06 算通CA -->
+    <string-array name="ca_state_array">
+        <item>智能状态</item>
+        <item>智能卡使用状态</item>
+        <item>智能卡类型</item>
+        <item>智能卡卡号</item>
+        <item>智能卡版本号</item>
+        <item>智能卡类型描述</item>
+        <item>CA系统标识</item>
+        <item>ECM子系统标识</item>
+        <item>EMM子系统标识</item>
+        <item>智能卡发卡日期</item>
+        <item>智能卡有效截止日期</item>
+        <item>父母锁控制级别(年龄)</item>
+        <item>分组控制码</item>
+        <item>区域控制码</item>
+        <item>智能卡配对状态</item>
+        <item>机顶盒配对状态</item>
+    </string-array>
+
+    <string name="card_status_0">智能卡状态正确</string>
+    <string name="card_status_1">未插入智能卡</string>
+    <string name="card_status_2">智能卡硬件错误</string>
+    <string name="card_status_4">智能卡软件错误</string>
+    <string name="card_status_6">子卡认证失败</string>
+    <string name="card_status_7">子卡认证成功</string>
+    <string name="card_status_8">母卡验证失败</string>
+    <string name="card_status_insert">插入</string>
+    <string name="card_status_extract">拔出</string>
+    <string name="card_usedstatus_effect">有效</string>
+    <string name="card_usedstatus_pause">暂停</string>
+    <string name="card_usedstatus_cancel">取消</string>
+    <string name="card_type_mother">母卡</string>
+    <string name="card_type_son">子卡</string>
+    <string name="card_type_error">未知</string>
+    <string name="card_match_not">未配对</string>
+    <string name="card_match_yes">配对</string>
+    <string name="card_match_noregister">未注册</string>
+    <string name="card_match_nostb">与机顶盒不匹配</string>
+    <string name="card_stbmatch_not">未配对</string>
+    <string name="card_stbmatch_yes">配对</string>
+    <string name="card_stbmatch_noregister">未注册</string>
+    <string name="card_lock_control">无限制</string>
+
+    <string-array name="ca_state_son_array">
+        <item>子卡认证时间</item>
+        <item>子卡工作周期(分钟)</item>
+        <item>子卡所属母卡UA</item>
+    </string-array>
+
+    <string name="ca_ppid_no">序号</string>
+    <string name="ca_ppid_id">节目提供商标识</string>
+    <string name="ca_ppid_name">节目提供商名称</string>
+    <string name="ca_ppid_status">节目提供商状态</string>
+
+    <string-array name="ca_ppid_detailed_array">
+        <item>节目提供商标识</item>
+        <item>节目提供商名称</item>
+        <item>节目提供商状态</item>
+        <item>智能卡内金额(元)</item>
+        <item>智能卡余额变更日期</item>
+        <item>频道授权状态</item>
+        <item>频道授权起始日期</item>
+        <item>频道授权截止日期</item>
+    </string-array>
+
+    <string name="card_ppid_status_effect">有效</string>
+    <string name="card_ppid_status_pause">暂停</string>
+    <string name="ca_ppid_ppv">显示/隐藏PPV</string>
+    <string name="ca_ppid_ippv">显示/隐藏IPPV</string>
+    <string name="ca_ppv_ippv_pageInfo">当前是第%1$s页，共%2$s条记录</string>
+    <string name="ca_dialog_title">请输入PIN密码：</string>
+    <string name="ca_dialog_confirm">确认</string>
+    <string name="ca_dialog_dismiss">取消</string>
+    <string name="ca_dialog_pwd_error">您输入的密码不正确！</string>
+    <string name="ca_ppid_get_fail">获取授权信息失败！</string>
+    <string name="ca_control_title">准禁播控制</string>
+    <string name="ca_control_set">设置准播/禁播</string>
+    <string name="ca_control_query">查询准播/禁播</string>
+    <string name="ca_control_cancel">取消准播/禁播</string>
+    <string name="ca_control_mode">模式设置</string>
+    <string name="ca_control_mode1">准播</string>
+    <string name="ca_control_mode2">禁播</string>
+    <string name="ca_control_mode3">取消准禁播</string>
+    <string name="ca_control_status">控制状态</string>
+    <string name="ca_control_status1">固定时间</string>
+    <string name="ca_control_status2">指定时间</string>
+    <string name="ca_control_s_date">开始日期</string>
+    <string name="ca_control_s_time">开始时间</string>
+    <string name="ca_control_e_date">结束日期</string>
+    <string name="ca_control_e_time">结束时间</string>
+    <string name="ca_control_datetime_info">请输入正确日期或时间，时差不能超过45天，年份是2000年以后!</string>
+    <string name="ca_control_time_info">结束时间要晚于开始时间!</string>
+    <string name="ca_control_s_channel">开始通道</string>
+    <string name="ca_control_e_channel">结束通道</string>
+    <string name="ca_control_channel_one">1</string>
+    <string name="ca_control_channel_two">2</string>
+    <string name="ca_control_channel_three">3</string>
+    <string name="ca_control_channel_four">4</string>
+    <string name="ca_control_channel_info">请输入正确的开始和结束通道值!</string>
+    <string name="ca_control_info_fail">准禁播信息保存失败!</string>
+    <string name="ca_control_info_success">准禁播信息保存成功!</string>
+
+    <!-- 2013.05.06 算通CA  end -->
+
+
+    <!-- Start LinKang, 2013-12-20, Add quote for System Information -->
+    <string name="system_information">系统咨询</string>
+    <string name="sys_info_hardware_version">硬体版本: </string>
+    <string name="sys_info_software_version">软体版本: </string>
+    <string name="sys_info_loader_version">loader version: </string>
+    <string name="sys_info_publish_time">发布时间: </string>
+    <string name="sys_info_serial_number">序列号: </string>
+    <string name="sys_info_user_id">用户ID: </string>
+    <string name="sys_info_mac_address">MAC: </string>
+    <string name="sys_info_ip_address">IP: </string>
+    <string name="sys_info_program">节目</string>
+    <string name="sys_info_voice_channel">声道: </string>
+    <string name="sys_info_trans_stream_id">TS ID: </string>
+    <string name="sys_info_service_id">SERVICE ID: </string>
+    <string name="sys_info_pcr">PCR: </string>
+    <string name="sys_info_video_pid">VPID: </string>
+    <string name="sys_info_audio_pid">APID: </string>
+    <string name="sys_info_frequency">频率: </string>
+    <string name="sys_info_symbol">符号率: </string>
+    <string name="sys_info_qam">调制方式: </string>
+    <string name="sys_info_unknown">无</string>
+    <!-- End LinKang, 2013-12-20, Add quote for System Information -->
+
+
+    <!-- Start LinKang, 2013-12-25, Add for EIT Category -->
+    <string name="eit_title">EPG分类</string>
+    <string name="switch_focus">切换焦点</string>
+    <string name="detail_info">详细咨询</string>
+    <string name="three_dimensional_stereo">立体声</string>
+    <string name="left_stereo">左声道</string>
+    <string name="right_stereo">右声道</string>
+    <string name="eit_film">电影</string>
+    <string name="eit_film_collection">影集</string>
+    <string name="eit_series">连剧</string>
+    <string name="eit_variety">综艺</string>
+    <string name="eit_music">音乐</string>
+    <string name="eit_intellectuality">知性</string>
+    <string name="eit_sports">体育</string>
+    <string name="eit_cartoon">卡通</string>
+    <string name="eit_news">新闻</string>
+    <string name="eit_drama">戏曲</string>
+    <string name="eit_others">其他</string>
+    <!-- End LinKang, 2013-12-25, Add for EIT Category -->
+
+
+    <!-- Start LinKang, 2014-01-06, Add for CA rate control -->
+    <string name="ca_choice">选择级别:</string>
+    <string name="ca_level_common">普</string>
+    <string name="ca_level_protect">保</string>
+    <string name="ca_level_aid">辅</string>
+    <string name="ca_level_limit">限</string>
+    <string name="ca_level_special">特</string>
+    <!-- End LinKang, 2014-01-06, Add for CA rate control -->
+
+
+    <!-- Start LinKang, 2014-01-09, Add for EPG page -->
+    <string name="real_time_task_conflict">和已有的预约任务冲突, 是否取消之前设置的任务?</string>
+    <string name="reservation_task_conflict">和已有的预约任务冲突, 是否取消之前设置的任务?</string>
+    <string name="task_expired">该节目已播完.</string>
+    <string name="pvr_task_exists">已预约</string>
+    <string name="epg_detail_no_content">没有信息...</string>
+    <string name="frequency_conflict_header">频点冲突</string>
+    <string name="frequency_conflict_message">切换播放节目会造成录制中断, 是否切台?</string>
+    <!-- End LinKang, 2014-01-09, Add for EPG page -->
+
+	<string name="boot_default_channel">启机预设频道</string>
+	<string name="boot_default_channel_switch">启机预设频道:</string>
+	<string name="boot_default_channel_switch_on">开启功能</string>
+	<string name="boot_default_channel_switch_off">关闭功能</string>
+	<string name="boot_default_channel_number">启动频道号码:</string>
+	<string name="bdc_format_error">设置失败,输入频道号码格式不正确.</string>
+	<string name="bdc_not_exist">设置失败,输入频道号码不存在.</string>
+	<string name="bdc_success">设置成功,重启后生效.</string>
+	<string name="bdc_search_forbid">搜索功能已禁用.</string>
+</resources>

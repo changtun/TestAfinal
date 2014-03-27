@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 失去焦点时，背景图片 -->
+    <item android:state_window_focused="false" android:drawable="@drawable/select_s"/>
+
+    <!-- 获得焦点时，背景图片 -->
+    <item android:state_focused="true" android:drawable="@drawable/select_s_focus"/>
+
+</selector>

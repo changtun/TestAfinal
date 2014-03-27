@@ -1,0 +1,33 @@
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_PRELINK_MODULE := false
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)
+LOCAL_SHARED_LIBRARIES := libutils \
+                          libc \
+                          liblog
+
+LOCAL_LDLIBS := -llog
+
+LOCAL_SRC_FILES := \
+                   src/drv_osapi/os_linux.c \
+                   src/drv_filter/drv_filter.c \
+				  
+
+LOCAL_SRC_FILES += \
+
+LOCAL_MODULE := libdvbadapt
+
+base := $(LOCAL_PATH)/../../../../../
+
+LOCAL_C_INCLUDES += \
+										$(base)/kernel/include \
+					          $(LOCAL_PATH)/../../include/am_adp \
+					          $(LOCAL_PATH)/../../include/am_mw \
+                    $(LOCAL_PATH)/include \
+                    $(LOCAL_PATH)/src/drv_tuner/AVL63X1/include \
+
+include $(BUILD_SHARED_LIBRARY)

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/event_image"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:gravity="center"
+            android:paddingBottom="3dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="3dip" />
+
+        <TextView
+            android:id="@+id/event_rate"
+            style="@style/Small"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:gravity="center"
+            android:paddingBottom="3dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="3dip"
+            android:textColor="@drawable/epg_text_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/event_time"
+        style="@style/Large"
+        android:layout_width="300dip"
+        android:layout_height="45dip"
+        android:paddingLeft="5dip"
+        android:textColor="@drawable/epg_text_color" />
+
+    <TextView
+        android:id="@+id/event_name"
+        style="@style/Large"
+        android:layout_width="450dip"
+        android:layout_height="45dip"
+        android:paddingRight="10dip"
+        android:textColor="@drawable/epg_text_color" />
+
+    <ImageView
+        android:id="@+id/event_Pvr_Status"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:gravity="center"
+        android:paddingBottom="3dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="3dip" />
+
+    <TextView
+        android:id="@+id/event_ymd"
+        style="@style/Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

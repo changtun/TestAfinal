@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="ModeArray">
+        <item>16QAM</item>
+        <item>32QAM</item>
+        <item>64QAM</item>
+        <item>128QAM</item>
+        <item>205QAM</item>
+    </string-array>
+    <string-array name="SoundtrackArray">
+        <item>@string/dvb_st_soundtrack_stereo</item>
+        <item>@string/dvb_st_soundtrack_mix</item>
+        <item>@string/dvb_st_soundtrack_left</item>
+        <item>@string/dvb_st_soundtrack_right</item>
+    </string-array>
+    <!-- Start LinKang, 2013-12-21, Add for eit category -->
+    <string-array name="EitCategory">
+        <item>@string/eit_film</item>
+        <item>@string/eit_film_collection</item>
+        <item>@string/eit_series</item>
+        <item>@string/eit_variety</item>
+        <item>@string/eit_music</item>
+        <item>@string/eit_intellectuality</item>
+        <item>@string/eit_sports</item>
+        <item>@string/eit_cartoon</item>
+        <item>@string/eit_news</item>
+        <item>@string/eit_drama</item>
+        <item>@string/eit_others</item>
+    </string-array>
+    <string-array name="ca_rate_level">
+        <item>@string/ca_level_common</item>
+        <item>@string/ca_level_protect</item>
+        <item>@string/ca_level_aid</item>
+        <item>@string/ca_level_limit</item>
+        <item>@string/ca_level_special</item>
+    </string-array>
+    <!--
+         <string-array name="TP_INFO">
+        <item>软体版本</item>
+        <item>MAC</item>
+        <item>IP</item>
+        <item>节目</item>
+        <item>声道</item>
+        <item>TS ID</item>
+        <item>VICE ID</item>
+        <item>PCR</item>
+        <item>VPID</item>
+        <item>APID</item>
+        <item>频率</item>
+        <item>符号率</item>
+        <item>调制方式</item>
+    </string-array>
+    -->
+    <!-- End LinKang, 2013-12-21, Add for eit category -->
+
+</resources>

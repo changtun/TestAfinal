@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/titleImage"
+                android:contentDescription="@string/appName"
+                android:src="@drawable/calendar" />
+
+            <com.pbi.dvb.view.TimeWidget style="@style/titleDate" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/titleText"
+            android:layout_width="470dip"
+            android:layout_toRightOf="@id/ll_date"
+            android:text="@string/system_information" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/titleImage"
+                android:contentDescription="@string/appName"
+                android:src="@drawable/clock" />
+
+            <DigitalClock style="@style/titleTime" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/logo"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="980dip"
+            android:layout_height="2dip"
+            android:layout_marginLeft="100dip"
+            android:background="@drawable/devider" />
+
+        <ListView
+            android:id="@+id/ll_ShowSystemInfo"
+            android:layout_width="fill_parent"
+            android:layout_height="450dip"
+            android:layout_gravity="center_horizontal"
+            android:fastScrollEnabled="true"
+            android:scrollbars="none" />
+        <!-- android:listSelector="@drawable/div_l_focus" -->
+
+        <View
+            android:layout_width="980dip"
+            android:layout_height="2dip"
+            android:layout_marginLeft="100dip"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/devider" />
+        <!-- Signal Quentity -->
+
+        <LinearLayout
+            style="@style/SearchItem"
+            android:layout_marginTop="2dip"
+            android:clickable="false"
+            android:focusable="false" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/SignalStrength" />
+
+            <ProgressBar
+                android:id="@+id/pb_search_strength"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="400dip"
+                android:layout_height="15dip"
+                android:layout_marginTop="2dip"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/tv_search_signal_strength"
+                style="@style/Small"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@drawable/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/SearchItem"
+            android:clickable="false"
+            android:focusable="false" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/SignalQuality" />
+
+            <ProgressBar
+                android:id="@+id/pb_search_quality"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="400dip"
+                android:layout_height="15dip"
+                android:layout_marginTop="2dip"
+                android:clickable="false"
+                android:focusable="false"
+                android:indeterminate="false"
+                android:indeterminateOnly="false" />
+
+            <TextView
+                android:id="@+id/tv_search_signal_quality"
+                style="@style/Small"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@drawable/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

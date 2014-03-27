@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/CaTopLL" >
+
+        <TextView
+            style="@style/titleText"
+            android:text="@string/ca_authInfo" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="1100dip"
+        android:layout_height="480dip"
+        android:layout_gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/auth_list_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="1100dip"
+                android:layout_height="60dip"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/CaPPIDText"
+                    android:layout_width="200dip"
+                    android:text="@string/ca_ppid_no" />
+
+                <TextView
+                    style="@style/CaPPIDText"
+                    android:layout_width="300dip"
+                    android:text="@string/ca_ppid_id" />
+
+                <TextView
+                    style="@style/CaPPIDText"
+                    android:layout_width="300dip"
+                    android:text="@string/ca_ppid_name" />
+
+                <TextView
+                    style="@style/CaPPIDText"
+                    android:layout_width="300dip"
+                    android:text="@string/ca_ppid_status" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="9dip"
+                android:background="@drawable/devider"
+                android:padding="30dip" />
+
+            <ListView
+                android:id="@+id/ca_auth_info_lv"
+                android:layout_width="1100dip"
+                android:layout_height="360dip"
+                android:layout_gravity="center"
+                android:fadingEdge="none"
+                android:listSelector="@drawable/select_l_focus" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_tv"
+            style="@style/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ca_card_info"
+            android:textColor="@drawable/white"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout style="@style/CaBottomLL" >
+
+        <TextView
+            style="@style/XSmall"
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:background="@drawable/ca_back"
+            android:gravity="center"
+            android:text="@string/ca_back"
+            android:textColor="@drawable/black" />
+    </LinearLayout>
+
+</LinearLayout>

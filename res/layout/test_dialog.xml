@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200px"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/test_dlg_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5px"
+        android:gravity="center"
+        android:textSize="30px" >
+    </TextView>
+    <!--
+    android:width="400sp"
+	<EditText android:id="@+id/url_goto"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip" android:capitalize="none"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+    -->
+
+</LinearLayout>

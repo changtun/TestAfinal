@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="50dip"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:src="@drawable/calendar" />
+
+            <com.pbi.dvb.view.TimeWidget style="@style/TitleTime" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="260dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ll_date"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                style="@style/Small"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/pvr_title"
+                android:textColor="@drawable/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/TitleClock"
+                android:src="@drawable/clock" />
+
+            <DigitalClock
+                style="@style/Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:paddingRight="60dip"
+                android:textColor="@drawable/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_content"
+        android:layout_width="fill_parent"
+        android:layout_height="525dip"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="25dip"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/pvr_mode" />
+
+            <TextView
+                android:id="@+id/pvr_mode"
+                style="@style/XSmall"
+                android:layout_width="400dip"
+                android:layout_height="40dip"
+                android:background="@drawable/list_selector"
+                android:gravity="center"
+                android:text="@string/mode_off"
+                android:textColor="@android:color/black" />
+
+            <requestFocus />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/pvr_wake" />
+
+            <TextView
+                android:id="@+id/pvr_wake"
+                android:layout_width="400dip"
+                android:layout_height="40dip"
+                android:background="@drawable/list_selector"
+                android:gravity="center"
+                android:text="@string/wake_record"
+                android:textColor="@android:color/black"
+                style="@style/XSmall"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/pvr_service_name" />
+
+            <TextView
+                android:id="@+id/pvr_service"
+                android:layout_width="400dip"
+                android:layout_height="40dip"
+                android:background="@drawable/list_selector"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                style="@style/XSmall"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/pvr_set_date" />
+
+            <EditText
+                android:id="@+id/pvr_set_date"
+                style="@style/ChannelSearchEditText"
+                android:maxLength="10" />
+
+            <TextView
+                android:id="@+id/pvr_week_date"
+                android:layout_width="400dip"
+                android:layout_height="40dip"
+                android:background="@drawable/list_selector"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                style="@style/XSmall"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/pvr_start_time" />
+
+            <EditText
+                android:id="@+id/pvr_start_time"
+                style="@style/ChannelSearchEditText"
+                android:maxLength="5" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/pvr_time_length" />
+
+            <EditText
+                android:id="@+id/pvr_time_length"
+                style="@style/ChannelSearchEditText"
+                android:maxLength="5" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/pvr_standby" />
+
+            <TextView
+                android:id="@+id/pvr_standby"
+                android:layout_width="400dip"
+                android:layout_height="40dip"
+                android:background="@drawable/list_selector"
+                android:gravity="center"
+                android:text="@string/standby_yes"
+                android:textColor="@android:color/black"
+                style="@style/XSmall"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/SearchItem"
+            android:layout_marginTop="40dip"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/pvr_save"
+                style="@style/Small"
+                android:layout_width="220dip"
+                android:layout_height="45dip"
+                android:background="@drawable/button_search_selector"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/ca_ok"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

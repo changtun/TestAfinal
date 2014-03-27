@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/bt_EitCagegory"
+        style="@style/Small"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:textColor="@color/white" />
+
+    <!-- android:background="@drawable/radiogroup_selector" -->
+
+</LinearLayout>

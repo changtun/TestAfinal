@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/CaTopLL" >
+
+        <TextView
+            style="@style/titleText"
+            android:text="@string/ca_control_title" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="480dip"
+        android:layout_gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/play_detail_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_mode" />
+
+                <TextView
+                    android:id="@+id/control_mode"
+                    style="@style/CaSetPopText" />
+
+                <requestFocus />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_status" />
+
+                <TextView
+                    android:id="@+id/control_status"
+                    style="@style/CaSetPopText" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_s_date" />
+
+                <EditText
+                    android:id="@+id/control_s_date"
+                    style="@style/ChannelSearchEditText"
+                    android:hint="yyyy-MM-dd"
+                    android:maxLength="10" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_s_time" />
+
+                <EditText
+                    android:id="@+id/control_s_time"
+                    style="@style/ChannelSearchEditText"
+                    android:hint="HH:mm"
+                    android:maxLength="5" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_e_date" />
+
+                <EditText
+                    android:id="@+id/control_e_date"
+                    style="@style/ChannelSearchEditText"
+                    android:hint="yyyy-MM-dd"
+                    android:maxLength="10" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_e_time" />
+
+                <EditText
+                    android:id="@+id/control_e_time"
+                    style="@style/ChannelSearchEditText"
+                    android:hint="HH:mm"
+                    android:maxLength="5" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_s_channel" />
+
+                <EditText
+                    android:id="@+id/control_s_channel"
+                    style="@style/ChannelSearchEditText"
+                    android:maxLength="4" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SearchItem" >
+
+                <TextView
+                    style="@style/SearchItemContent"
+                    android:text="@string/ca_control_e_channel" />
+
+                <EditText
+                    android:id="@+id/control_e_channel"
+                    style="@style/ChannelSearchEditText"
+                    android:maxLength="4" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/error_tv"
+            style="@style/Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ca_card_info"
+            android:textColor="@drawable/white"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout style="@style/CaBottomLL" >
+
+        <Button
+            android:id="@+id/save_play_control"
+            style="@style/CaBottomButton"
+            android:background="@drawable/button_search_selector"
+            android:text="@string/ca_ok" />
+    </LinearLayout>
+
+</LinearLayout>

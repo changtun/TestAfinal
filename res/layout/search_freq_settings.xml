@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/titleImage"
+                android:contentDescription="@string/appName"
+                android:src="@drawable/calendar" />
+
+            <com.pbi.dvb.view.TimeWidget style="@style/titleDate" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/titleText"
+            android:layout_toRightOf="@id/ll_date"
+            android:layout_width="470dip"
+            android:text="@string/search_freq_settings" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/titleImage"
+                android:contentDescription="@string/appName"
+                android:src="@drawable/clock" />
+
+            <DigitalClock style="@style/titleTime" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_content"
+        android:layout_width="fill_parent"
+        android:layout_height="500dip"
+        android:layout_below="@id/logo"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="980dip"
+            android:layout_height="2dip"
+            android:layout_marginLeft="100dip"
+            android:background="@drawable/devider" />
+
+
+        <LinearLayout style="@style/SearchItem" >
+
+            <TextView
+                style="@style/SearchItemContent"
+                android:text="@string/main_frequency" />
+
+            <EditText
+                android:id="@+id/et_main_frequency"
+                style="@style/ChannelSearchEditText"
+                android:maxLength="7"
+                android:text="@string/InputFrequencyDefault" />
+        </LinearLayout>
+
+        <!-- Current Channel -->
+
+
+
+        <View
+            android:layout_width="980dip"
+            android:layout_height="2dip"
+            android:layout_marginLeft="100dip"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/devider" />
+        <!-- Signal Quentity -->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginRight="30dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            style="@style/RemindImage"
+            android:background="@drawable/confirm" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/sure" />
+
+        <ImageView
+            style="@style/RemindImage"
+            android:background="@drawable/back" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/back" />
+
+        <ImageView
+            style="@style/RemindImage"
+            android:background="@drawable/updown" />
+
+        <ImageView
+            style="@style/RemindImage"
+            android:background="@drawable/leftright" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/select" />
+
+        <ImageView
+            style="@style/RemindImage"
+            android:background="@drawable/del" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/clear" />
+    </LinearLayout>
+
+</RelativeLayout>

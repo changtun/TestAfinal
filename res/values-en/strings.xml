@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appName">Digital TV</string>
+    <string name="ChannelNo">Channel NO.</string>
+    <string name="ChannelName">Channel name</string>
+    <string name="ChannelSearch">Program Search </string>
+    <string name="sure">Confirm</string>
+    <string name="back">Back</string>
+    <string name="select">Select</string>
+    <string name="clear">Clear</string>
+    <string name="page">Paging</string>
+    <string name="SearchType">Search Type:</string>
+    <string name="AutoScan">Auto search</string>
+    <string name="ManualScan">Manual search</string>
+    <string name="SearchNow">Search</string>
+    <string name="ModulationMode">Modulation(QAM):</string>
+    <string name="InputFrequency">Frequency(KHz):</string>
+    <string name="ModulationModeDefault">256 QAM</string>
+    <string name="InputFrequencyDefault">735000</string>
+    <string name="SymbolRate">Symbol Rate(Kbps):</string>
+    <string name="SymbolRateDefault">5210</string>
+    <string name="SignalStrength">Level</string>
+    <string name="SignalQuality">Quality</string>
+    <string name="Mon">Mon</string>
+    <string name="Tue">Tue</string>
+    <string name="Wed">Wed</string>
+    <string name="Thr">Thr</string>
+    <string name="Fri">Fri</string>
+    <string name="Sat">Sat</string>
+    <string name="Sun">Sun</string>
+    <string name="ChannelSearchResult">Search Result</string>
+    <string name="TV">TV</string>
+    <string name="Radio">Broadcast</string>
+    <string name="AllChannels">All channels:</string>
+    <string name="TVChannels">TV programs</string>
+    <string name="RadioChannels">Broadcasting:</string>
+    <string name="TVChannel">TV</string>
+    <string name="RadioChannel">Broadcasting</string>
+    <string name="ChannelSearchProgress">Search progress</string>
+    <string name="ChannelList">Program List</string>
+    <string name="OK">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="searchTips">Prompting</string>
+    <string name="PasswordTips">The length of the password should be four</string>
+    <string name="channelNotice">Sorry! There isn\'t any DVB program.</string>
+    <string name="searchNotice">沒有搜索到節目，您是否嘗試重新搜索?</string>
+    <string name="search_freq_settings">頻點設置</string>
+    <string name="main_frequency">主頻點(KHz)</string>
+
+    <!-- Password Tips -->
+    <string name="password_title">提示資訊</string>
+    <string name="password_programme">請輸入節目鎖密碼</string>
+    <string name="password_stb">輸入機頂盒密碼</string>
+    <string name="password_wrong_tips">密碼錯誤請重新輸入</string>
+    <string name="viewing_level_control">本節目收視級別管制中</string>
+    <string name="viewing_level_control_remove">按F1解除管制</string>
+    <string name="category_level_control">本節目類別-</string>
+    <string name="category_controlling">管制中</string>
+    <string name="category_movie">電影</string>
+    <string name="category_albums">影集</string>
+    <string name="category_soap">連劇</string>
+    <string name="category_variety">綜藝</string>
+    <string name="category_music">音樂</string>
+    <string name="category_cognitivene">知性</string>
+    <string name="category_sports">體育</string>
+    <string name="category_cartoons">卡通</string>
+    <string name="category_news">新聞</string>
+    <string name="category_opera">戲曲</string>
+    <string name="category_other">其他</string>
+
+    <!-- CTI Ca Message -->
+    <string name="E00">E00  Non encrypted program</string>
+    <string name="E01">E01  Please insert a smart card</string>
+    <string name="E02">E02  The smart card is not recognized</string>
+    <string name="E03">E03  Verifying the smart card</string>
+    <string name="E04">E04  No program</string>
+    <string name="E05">E05  The daughter card authentication is successful</string>
+    <string name="E06">E06  Smart card OK</string>
+    <string name="E07">E07  The daughter card authentication failure</string>
+    <string name="E08">E08  The mother card authentication failure</string>
+    <string name="E09"></string>
+    <string name="E10">E10  Unable to identify the encrypted program</string>
+    <string name="E11">E11  Area code does not match</string>
+    <string name="E12">E12  The machine card does not match</string>
+    <string name="E13">E13  Parental lock level is too low</string>
+    <string name="E14">E14  Control word error</string>
+    <string name="E15">E15  No delegation of decryption</string>
+    <string name="E16">E16  Successful descrambling</string>
+    <string name="E17">E17  The son card expired</string>
+    <string name="E18">E18  User banned quasi broadcast control</string>
+    <string name="E19">E19  Regional banned quasi broadcast control</string>
+    <string name="E20">E20  IPPV Program</string>
+    <string name="E21">E21  Smart card program to authorize suspension</string>
+    <string name="E22">E22  The smart card in the inactive state</string>
+    <string name="E23">E23  Smart card expired</string>
+    <string name="E24">E24  Smart card license be suspended</string>
+    <string name="E25">E25  Distribution of ECM Channel failed</string>
+    <string name="E26">E26  Descrambling channel allocation failure</string>
+    <string name="E27">E27  Smart card error descrambling at</string>
+    <string name="E28">E28  The program state error</string>
+    <string name="E29">E29  Distribution of ECM Filter failed</string>
+    <string name="E30">E30  PID switch failure</string>
+    <string name="E40">E40  The user must ban set successfully.</string>
+    <string name="E41">E41  The user must banned data read successfully</string>
+    <string name="E42">E42  The user must ban set time error</string>
+    <string name="E43">E43  The user must control the time long banned</string>
+    <string name="E44">E44  The user must ban set channel error</string>
+    <string name="E45">E45  The user must ban set mode error</string>
+    <string name="E46">E46  The user must set the PIN error code banned</string>
+    <string name="E47">E47  The user must ban settings failed</string>
+    <string name="E48"></string>
+    <string name="E49"></string>
+    <string name="E50">E50  IPPV program success</string>
+    <string name="E51">E51  IPPV password error</string>
+    <string name="E52">E52  The IPPV program expired</string>
+    <string name="E53">E53  IPPV on demand is insufficient</string>
+    <string name="E54">E54  IPPV does not support</string>
+    <string name="E55">E55  IPPV request failed</string>
+    <string name="E56">E56  IPPV ended successfully</string>
+    <string name="E57">E57  The end of IPPV failure</string>
+
+    <!-- CTI Ca IPPV -->
+    <string name="cti_ippv_title">IPPV</string>
+    <string name="cti_ippv_tips">This is payment program,you need to input password to buy.</string>
+    <string name="cti_ippv_service_id">Channel NO.:</string>
+    <string name="cti_ippv_company">Company ID:</string>
+    <string name="cti_ippv_company_name">Company Name:</string>
+    <string name="cti_ippv_purchase_way">Buying patterns:</string>
+    <string name="cti_ippv_purchase_by_channel_tips">One-time purchase price</string>
+    <string name="cti_ippv_purchase_by_time_tips">The purchase price to watch time:</string>
+    <string name="cti_ippv_purchase_by_channel_unit">Yuan</string>
+    <string name="cti_ippv_purchase_by_time_unit">Yuan/Minute</string>
+    <string name="cti_ippv_by_channel">One time purchase</string>
+    <string name="cti_ippv_by_time">According to the time to buy</string>
+    <string name="cti_ippv_next_time">Don\'t buy program</string>
+    <string name="cti_ippv_pin_code">Input password：</string>
+    <string name="cti_ippv_status0">IPPV on demand</string>
+    <string name="cti_ippv_status1">PIN not correct</string>
+    <string name="cti_ippv_status2">IPPV program has expired</string>
+    <string name="cti_ippv_status3">Amount is insufficient</string>
+    <string name="cti_ippv_status4">On demand mode is not supported</string>
+    <string name="cti_ippv_status5">On failure</string>
+    <string name="cti_ippv_status6">IPPV stop success</string>
+    <string name="cti_ippv_status7">IPPV stop failed</string>
+    <string name="cti_ippv_status8">Operation type error</string>
+
+    <!-- SoundTrack Settings -->
+    <string name="dvb_soundtrack_settings">Track Settings</string>
+    <string name="dvb_st_language_selection">Language:</string>
+    <string name="dvb_st_soundtrack_selection">Soundtrack:</string>
+    <string name="dvb_st_soundtrack_stereo">Stereo</string>
+    <string name="dvb_st_soundtrack_mix">Mixture</string>
+    <string name="dvb_st_soundtrack_left">Left</string>
+    <string name="dvb_st_soundtrack_right">Right</string>
+
+    <!-- Player Message -->
+    <string name="NoSignal">No signal</string>
+    <string name="ProgramInterrupt">Program interrupt!</string>
+    <string name="NoPrograms">Program does not exist!</string>
+    <string name="NITUpdate">Do you want to update the program list?</string>
+
+    <!-- Search Message -->
+    <string name="SaveProgram">Wait a moment……</string>
+    <string name="no_program_auto_search">Program is empty, whether search program?</string>
+    <string name="auto_search_or_not">No search to the program, whether to exit &#8230;</string>
+
+    <!-- Program Edit -->
+    <string name="ChannelEdit">Program Edit</string>
+    <string name="EditFav">Favourite</string>
+    <string name="EditMov">Move</string>
+    <string name="EditLock">Lock</string>
+    <string name="EditDel">Delete</string>
+    <string name="EditDelAll">Delete All</string>
+    <string name="AllPrograms">All Programs</string>
+    <string name="TVPrograms">TV Programs</string>
+    <string name="BroadcastPrograms">Radio</string>
+    <string name="FavPrograms">Favourite</string>
+    <string name="Programme_Password">Please enter the password</string>
+    <string name="Parent_Child_Password">Please input parent-child password</string>
+    <string name="input_password_tips">Password not correct</string>
+    <string name="input_password_try_again">Please try again</string>
+    <string name="Save_tips">Do you want to save the edited content?</string>
+
+    <!-- EPG -->
+    <string name="ChannelEpg">Program Guide</string>
+    <string name="epg_current_name">Current Program Info</string>       
+    <string name="epg_next_name">Subsequent Program Info</string>     
+    <string name="ca_current_name">Current Program:</string>
+    <string name="ca_cost_rate">Rate:</string>
+    <string name="ca_introduction">Introduction:</string>
+    <string name="ca_buy">Buy</string>
+    <string name="ca_exit">leave</string>
+    <string name="ca_notice">Notice</string>
+    <string name="ca_reminder">Reminder</string>
+    <string name="ca_ipp_purchase_success">Purchase successfully!</string>
+    <string name="ca_ipp_purchase_fail">Purchase failure!</string>
+    <string name="ca_child_pwd">Please enter the child lock password</string>
+    <string name="invilid_programme">Invalid program!</string>
+
+    <!-- EPG -->
+    <string name="epg_title">EPG</string>
+    <string name="today">Today</string>
+    <string name="progTime">Show Time</string>
+    <string name="progName">Program Content</string>
+    <string name="progOrder">Booking</string>
+    <string name="channelProm">TV Programs</string>
+    <string name="convertService">Program</string>
+    <string name="convertFocus">Focus</string>
+    <string name="convertEvent">Guide</string>
+    <string name="convert7Day">Date</string>
+    <string name="convertPvrOrder">Order Rec</string>
+    <string name="convertPlayOrder">Order Play</string>
+    <string name="rate_normal">N</string>
+    <string name="rate_protect">P</string>
+    <string name="rate_assist">A</string>
+    <string name="rate_adult">L</string>
+    <string name="rate_special">S</string>
+
+    <!-- PVR -->
+    <string name="end_pvr1">Recording:</string>
+    <string name="end_pvr2">Do you want to finish it?</string>
+    <string name="end_tms">Do you want to finish the time shifting?</string>
+    <string name="pvr_start">Start</string>
+    <string name="pvr_stop">Stop</string>
+    <string name="pvr_pause">Pause</string>
+    <string name="pvr_rec">·REC</string>
+    <string name="pvr_ts">·TMS</string>
+    <string name="hdd_no">Unable to find any external storage device.</string>
+    <string name="hdd_notEnough">Lack of enough storage space.</string>
+    <string name="pvr_recording"> The DVB is in recording mode, other service is not avaiable now!</string>
+    <string name="free_space">2000</string>
+    <string name="min_space">100</string>
+    <string name="pvr_play_title">PVR Player</string>
+    <string name="pvr_title">Scheduled Program</string>
+    <string name="pvr_number">Num</string>
+    <string name="pvr_mode">Mode</string>
+    <string name="pvr_wake">Wake-up</string>
+    <string name="pvr_service_name">Channel</string>
+    <string name="pvr_set_date">Date</string>
+    <string name="pvr_start_time">Start time</string>
+    <string name="pvr_time_length">Length</string>
+    <string name="pvr_standby">Standby Or Not</string>
+    <string name="standby_yes">Yes</string>
+    <string name="standby_no">No</string>
+    <string name="mode_off">Off</string>
+    <string name="mode_onetime">Once</string>
+    <string name="mode_perday">Day</string>
+    <string name="mode_perweek">Week</string>
+    <string name="mode_wrokingday">Workday</string>
+    <string name="wake_record">Record</string>
+    <string name="wake_play">Play</string>
+    <string name="pvr_save_fail_null">Failed, null item is not allowed!</string>
+    <string name="pvr_save_fail_format">Failed, the format of date or time is error!</string>
+    <string name="pvr_save_success">Save successfully!</string>
+    <string name="pvr_orderfull_info">The list of recording task is full, please close some useless reservation tasks!</string>
+    <string name="pvr_play_eof">The player has reached the end of the file</string>
+    <string name="pvr_play_sof">The player has initialized to the begin of the file</string>
+    <string name="pvr_play_inner_error">Encountered an error during playback</string>
+    <string name="pvr_disk_full">The storage disk is full.</string>
+    <string name="pvr_inner_error">Encountered an error during recording</string>
+    <string name="pvr_length">The player has reached a specified length of the file</string>
+    <string name="pvr_speed">Disk storage has a slower speed than the recording speed</string>
+    <string name="pvr_delete_file_tips">Do you want to delete current file?</string>
+
+    <!-- CA -->
+    <string name="ca_title">CA</string>
+
+    <!-- 算通CA 2013.05.06 -->
+    <string name="ca_stateInfo">Smart Card Info</string>
+    <string name="ca_authInfo">License</string>
+    <string name="ca_emailList">TV Mail</string>
+    <string name="ca_PasswordSet">Password Setting</string>
+    <string name="ca_rateControl">Parent Control</string>
+    <string name="ca_playControl">Play Control</string>
+    <string name="stateInfo">Smart Card Info</string>
+    <string name="smart_no">Smart Card Number:</string>
+    <string name="smart_version">Smart Card Version:</string>
+    <string name="ca_version">CA Version:</string>
+    <string name="ca_rate">Watch Level:</string>
+    <string name="rate_message">Watch level,please enter 4 to 18 digital!</string>
+    <string name="password_message">Please input length is 4 password!</string>
+    <string name="password_set">Password</string>
+    <string name="password_old">Old Password:</string>
+    <string name="password_new">New Password:</string>
+    <string name="password_new_again">Input again:</string>
+    <string name="password_new_error">New password twice to enter inconsistent, please re-enter!</string>
+    <string name="password_success">Password settings save success!</string>
+    <string name="password_fail">Password settings save failed!</string>
+    <string name="rate_control">Maturity Rating</string>
+    <string name="rate_input">Input Level(4..18) :</string>
+    <string name="rate_password">Password :</string>
+    <string name="rate_success">Adult level control save success!</string>
+    <string name="rate_fail">Adult level control save failed!</string>
+    <string name="auth_info">License</string>
+    <string name="auth_normal">Ordinary Info</string>
+    <string name="auth_ipp">IPP Info</string>
+    <string name="auth_wallet">Wallet Info</string>
+    <string name="auth_consume">IPP Consume</string>
+    <string name="normal_productID">ID</string>
+    <string name="normal_state">State</string>
+    <string name="normal_date">Date</string>
+    <string name="normal_authOk">Authorized</string>
+    <string name="normal_authParamError">Param error</string>
+    <string name="normal_authWithout">Without</string>
+    <string name="normal_authRestrict">Limited</string>
+    <string name="normal_authClose">Close</string>
+    <string name="normal_authPause">Suspend</string>
+    <string name="ipp_ID">ID</string>
+    <string name="ipp_type">Type</string>
+    <string name="ipp_startTime">Start Time</string>
+    <string name="ipp_endTime">End Time</string>
+    <string name="ipp_type_ippv">IPPV</string>
+    <string name="ipp_type_ippt">IPPT</string>
+    <string name="wallet_ID">ID</string>
+    <string name="wallet_credit">Credit Line</string>
+    <string name="wallet_remain">Remaining</string>
+    <string name="consume_id">ID</string>
+    <string name="consume_time">Time</string>
+    <string name="consume_state">State</string>
+    <string name="consume_number">Num</string>
+    <string name="consume_money">Money</string>
+    <string name="consume_store">Store</string>
+    <string name="consume_pay">Pay</string>
+    <string name="email_list">Mail</string>
+    <string name="email_no">Num</string>
+    <string name="email_status">State</string>
+    <string name="email_title">Title</string>
+    <string name="email_receiveTime">Time</string>
+    <string name="email_delete">Deleted</string>
+    <string name="email_received">Received :</string>
+    <string name="email_space">Remaining ：</string>
+    <string name="email_detail_time">Time：</string>
+    <string name="email_unread">Unread</string>
+    <string name="email_read">Read</string>
+    <string name="email_delete_one">Confirm delete the following e-mail?</string>
+    <string name="email_delete_all">Confirm delete all e-mails?</string>
+    <string name="email_full_front">Mailbox is full，have</string>
+    <string name="email_full_behind">mails not shown，please remove some!</string>
+    <string name="email_info_remind_one">Delete one</string>
+    <string name="email_info_remind_all">Delete all</string>
+    <string name="ca_back">Return</string>
+    <string name="ca_leave">Leave</string>
+    <string name="ca_ok">OK</string>
+    <string name="ca_cancel">Cancel</string>
+    <string name="caState_introduction">Display CA state information!</string>
+    <string name="auth_introduction">Shows common authorization, IPP authorization,electronic purse information!</string>
+    <string name="ca_card_info">The smart card does not exist, please insert the smart card!</string>
+    <string name="zimu_card_feeding">Slave Card Feeding</string>
+    <string name="zimu_input_mu">Insert the mother card, press the Enter key!</string>
+    <string name="zimu_input_zi">Insert the sub Card, press the Enter key!</string>
+    <string name="zimu_success">Feeding success!</string>
+    <string name="zimu_fail_mu">Data error reading the mother card feeding failure!</string>
+    <string name="zimu_fail_zi">Error write sub-Card data, feeding failed!</string>
+
+    <!-- RecordSetting -->
+    <string name="RecordSetting">Video Settings</string>
+    <string name="RecordMode">Mode</string>
+    <string name="ModeDefault">Close</string>
+    <string name="WakeUPMode">Wake-up mode</string>
+    <string name="WakeUPModeDefault">Video</string>
+    <string name="WakeChannel">Wake-up channel</string>
+    <string name="RecordDate">Date</string>
+    <string name="RecordTime">Time</string>
+    <string name="RecordLength">Recording length</string>
+    <string name="save">Save</string>
+    <string name="cancle">Cancel</string>
+
+    <!-- Add by LinKang for pvr time up dialog begin -->
+    <string name="pvr_string_ok">OK</string>
+    <string name="pvr_string_cancel">Cancel</string>
+    <string name="pvr_string_record_notice">Are you sure to start recording the show:</string>
+    <string name="pvr_string_close_notice">Notice: Click OK button will close the current application and go to the home page automatically.</string>
+    <string name="pvr_string_play_notice">Are you sure to start playing show:</string>
+    <string name="pvr_hdd_notEnough_notice">There is not enough disk space for recording.\nPlease try to empty the disk and the system will start to record then.</string>
+    <string name="pvr_hdd_no_notice">Please insert any supported storage device, the system will start to record after then.</string>
+    <string name="pvr_time_invalid">The reservation time you set can not be earlier than this moment.</string>
+    <string name="pvr_time_conflict">The reservation time you set has some conflict with tasks in the database.\nThe interval between two tasks can not smaller than two minutes.</string>
+    <string name="pvr_time_suspend_notice">Are you sure to make the android system enter the stand-by state?</string>
+    <!-- Add by LinKang for pvr time up dialog end -->
+
+    <!-- Add by LinKang for OTA dialog begin -->
+    <string name="ota">OTA</string>
+    <string name="ota_receive_update_message_notice">Detected package for updating, whether to download immediately?\n\n pressing button ok will go bak to home page , and stop DVB other services.</string>
+    <string name="ota_error_notice">OTA download exception, reboot to be re-downloaded.</string>
+    <string name="ota_downloader_notice">Download OTA is in progress, can not provide other DVB services, the services will be recoveryed when the progress finished.</string>
+    <string name="ota_download_finished">OTA download finished, pressing button ok will start update. the progress will last a few minutes and reboot a few times.</string>
+    <!-- Add by LinKang for OTA dialog end -->
+    <!-- 2013.05.06 算通CA -->
+    <string-array name="ca_state_array">
+        <item>Smart State</item>
+        <item>Smart Card Status</item>
+        <item>Smart Card Type</item>
+        <item>Card Number</item>
+        <item>Version Number</item>
+        <item>Type Description</item>
+        <item>CA SYS Identification</item>
+        <item>ECM Subsystem ID</item>
+        <item>EMM Subsystem ID</item>
+        <item>Issuing Date</item>
+        <item>Expiration Date</item>
+        <item>Parental Lock Level(age)</item>
+        <item>Program Packet Control Code</item>
+        <item>Area Control Code</item>
+        <item>Smart Card Pairing Status</item>
+        <item>Set-top box Pairing Status</item>
+    </string-array>
+
+    <string name="card_status_0">Card Status Right</string>
+    <string name="card_status_1">No Card Inserted</string>
+    <string name="card_status_2">Card software Wrong</string>
+    <string name="card_status_4">Card Software Wrong</string>
+    <string name="card_status_6">The daughter card authentication failure</string>
+    <string name="card_status_7">The daughter card authentication is successful</string>
+    <string name="card_status_8">The mother card authentication failure</string>
+    <string name="card_status_insert">Insert</string>
+    <string name="card_status_extract">Extract</string>
+    <string name="card_usedstatus_effect">Effect</string>
+    <string name="card_usedstatus_pause">Suspended</string>
+    <string name="card_usedstatus_cancel">Canceled</string>
+    <string name="card_type_mother">Mother Card</string>
+    <string name="card_type_son">Son Card</string>
+    <string name="card_type_error">Unknown</string>
+    <string name="card_match_not">Not Match</string>
+    <string name="card_match_yes">Match</string>
+    <string name="card_match_noregister">Unregistered</string>
+    <string name="card_match_nostb">Not STB Match</string>
+    <string name="card_stbmatch_not">Not Match</string>
+    <string name="card_stbmatch_yes">Match</string>
+    <string name="card_stbmatch_noregister">STB Unregistered</string>
+    <string name="card_lock_control">Unlimited</string>
+
+    <string-array name="ca_state_son_array">
+        <item>Soncard Authentication Time</item>
+        <item>Soncard cycle(Yuan)</item>
+        <item>Soncard Master Card UA</item>
+    </string-array>
+
+    <string name="ca_ppid_no">Number</string>
+    <string name="ca_ppid_id">Program Provider Identifier</string>
+    <string name="ca_ppid_name">Program Provider Name</string>
+    <string name="ca_ppid_status">Program Provider Status</string>
+
+    <string-array name="ca_ppid_detailed_array">
+        <item>Program Provider Identifier</item>
+        <item>Program Provider Name</item>
+        <item>Program Provider Status</item>
+        <item>Smart Card Amount(yuan)</item>
+        <item>Amount Change Date</item>
+        <item>Authorized State</item>
+        <item>Authorized Start Date</item>
+        <item>Authorized End Date</item>
+    </string-array>
+
+    <string name="card_ppid_status_effect">Effect</string>
+    <string name="card_ppid_status_pause">Pause</string>
+    <string name="ca_ppid_ppv">show/hide PPV</string>
+    <string name="ca_ppid_ippv">show/hide IPPV</string>
+    <string name="ca_ppv_ippv_pageInfo">current page is %1$s, record is %2$s</string>
+    <string name="ca_dialog_title">Please enter PIN Password：</string>
+    <string name="ca_dialog_confirm">Confirm</string>
+    <string name="ca_dialog_dismiss">Cancel</string>
+    <string name="ca_dialog_pwd_error">Password you entered is incorrect!</string>
+    <string name="ca_ppid_get_fail">The authorization info get failed!</string>
+    <string name="ca_control_title">quasi-ban control</string>
+    <string name="ca_control_set">set up quasi-broadcast</string>
+    <string name="ca_control_query">query quasi broadcast</string>
+    <string name="ca_control_cancel">cancel quasi-broadcast</string>
+    <string name="ca_control_mode">mode settings</string>
+    <string name="ca_control_mode1">quasi-broadcast</string>
+    <string name="ca_control_mode2">ban</string>
+    <string name="ca_control_mode3">cancel quasi-ban</string>
+    <string name="ca_control_status">control status</string>
+    <string name="ca_control_status1">fixed time</string>
+    <string name="ca_control_status2">specified time</string>
+    <string name="ca_control_s_date">start date</string>
+    <string name="ca_control_s_time">start time</string>
+    <string name="ca_control_e_date">end date</string>
+    <string name="ca_control_e_time">End Time</string>
+    <string name="ca_control_datetime_info">Enter the correct date or time, the time difference is not more than 45 days, the year after the year 2000!</string>
+    <string name="ca_control_time_info">end time is later than the start time!</string>
+    <string name="ca_control_s_channel">start channel</string>
+    <string name="ca_control_e_channel">ending channel</string>
+    <string name="ca_control_channel_one">1</string>
+    <string name="ca_control_channel_two">2</string>
+    <string name="ca_control_channel_three">3</string>
+    <string name="ca_control_channel_four">4</string>
+    <string name="ca_control_channel_info">Please enter the correct start and end channel values​​!</string>
+    <string name="ca_control_info_fail">quasi-ban information save failed!</string>
+    <string name="ca_control_info_success">quasi-ban information saved successfully!</string>
+
+    <!-- 2013.05.06 算通CA  end -->
+
+
+    <!-- Start LinKang, 2013-12-20, Add quote for System Information -->
+    <string name="system_information">System Information</string>
+    <string name="sys_info_hardware_version">HardVer: </string>
+    <string name="sys_info_software_version">SoftVer: </string>
+    <string name="sys_info_loader_version">loader version: </string>
+    <string name="sys_info_publish_time">Time: </string>
+    <string name="sys_info_serial_number">SerNum: </string>
+    <string name="sys_info_user_id">UseID: </string>
+    <string name="sys_info_mac_address">MAC: </string>
+    <string name="sys_info_ip_address">IP: </string>
+    <string name="sys_info_program">Program</string>
+    <string name="sys_info_voice_channel">Audio: </string>
+    <string name="sys_info_trans_stream_id">TS ID: </string>
+    <string name="sys_info_service_id">SERVICE ID: </string>
+    <string name="sys_info_pcr">PCR: </string>
+    <string name="sys_info_video_pid">VPID: </string>
+    <string name="sys_info_audio_pid">APID: </string>
+    <string name="sys_info_frequency">Frequency: </string>
+    <string name="sys_info_symbol">Symbolrate: </string>
+    <string name="sys_info_qam">QAMStyle: </string>
+    <string name="sys_info_unknown">UNKNOWN</string>
+    <!-- End LinKang, 2013-12-20, Add quote for System Information -->
+    <!-- Start LinKang, 2013-12-25, Add for EIT Category -->
+    <string name="eit_title">EPG Category</string>
+    <string name="switch_focus">Switch Focus</string>
+    <string name="detail_info">Deital Information</string>
+    <string name="three_dimensional_stereo">3d Stereo</string>
+    <string name="left_stereo">Left Stereo</string>
+    <string name="right_stereo">Right Stereo</string>
+    <string name="eit_film">Film</string>
+    <string name="eit_film_collection">Films</string>
+    <string name="eit_series">Series</string>
+    <string name="eit_variety">Variety</string>
+    <string name="eit_music">Music</string>
+    <string name="eit_intellectuality">Intellectuality</string>
+    <string name="eit_sports">Sports</string>
+    <string name="eit_cartoon">Cartoon</string>
+    <string name="eit_news">News</string>
+    <string name="eit_drama">Drama</string>
+    <string name="eit_others">Others</string>
+    <!-- End LinKang, 2013-12-20, Add quote for System Information -->
+    <!-- Start LinKang, 2014-01-06, Add for CA rate control -->
+    <string name="ca_choice">Choose Level:</string>
+    <string name="ca_level_common">COMMON</string>
+    <string name="ca_level_protect">PROTECT</string>
+    <string name="ca_level_aid">AID</string>
+    <string name="ca_level_limit">LIMIT</string>
+    <string name="ca_level_special">SPECIAL</string>
+    <!-- End LinKang, 2014-01-06, Add for CA rate control -->
+
+
+    <!-- Start LinKang, 2014-01-09, Add for EPG page -->
+    <string name="real_time_task_conflict">Conflict with the exists tasks. Wether to cancel the exists tasks?</string>
+    <string name="reservation_task_conflict">Conflict with the exists tasks. Wether to cancel the exists tasks?</string>
+    <string name="task_expired">The task has been expired.</string>
+    <string name="pvr_task_exists">Reserve</string>
+    <string name="epg_detail_no_content">No Detail...</string>
+    <string name="frequency_conflict_header">Frequency Conflict</string>
+    <string name="frequency_conflict_message">Exchanging the program will stop the recording. Are you sure to playing the new program?</string>
+    <!-- End LinKang, 2014-01-09, Add for EPG page -->
+
+	<string name="boot_default_channel">Boot Default Channels</string>
+	<string name="boot_default_channel_switch">Boot Default Channels:</string>
+	<string name="boot_default_channel_switch_on">Open</string>
+	<string name="boot_default_channel_switch_off">Close</string>
+	<string name="boot_default_channel_number">Default Channel Number:</string>
+	<string name="bdc_format_error">Setup failed, enter the channel number format is not correct.</string>
+	<string name="bdc_not_exist">Setup failed, enter the channel number does not exist.</string>
+	<string name="bdc_success">Setup is successful, come into force after the restart.</string>
+	<string name="bdc_search_forbid">The search function has been disabled.</string>
+</resources>

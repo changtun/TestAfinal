@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/titleImage"
+                android:contentDescription="@string/appName"
+                android:src="@drawable/calendar" />
+
+            <com.pbi.dvb.view.TimeWidget style="@style/titleDate" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/titleText"
+            android:layout_width="470dip"
+            android:layout_toRightOf="@id/ll_date"
+            android:text="@string/ChannelEdit" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/titleImage"
+                android:contentDescription="@string/appName"
+                android:src="@drawable/clock" />
+
+            <DigitalClock style="@style/titleTime" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_search_content"
+        android:layout_width="fill_parent"
+        android:layout_height="550dip"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_marginLeft="120dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/ChannelContentText"
+                android:layout_width="150dip"
+                android:layout_marginLeft="90dip"
+                android:text="@string/ChannelNo" />
+
+            <TextView
+                style="@style/ChannelContentText"
+                android:layout_width="310dip"
+                android:text="@string/ChannelName" />
+
+            <TextView
+                style="@style/ChannelContentText"
+                android:layout_width="180dip"
+                android:text="@string/EditFav" />
+
+            <TextView
+                style="@style/ChannelContentText"
+                android:layout_width="180dip"
+                android:text="@string/EditLock" />
+
+            <TextView
+                style="@style/ChannelContentText"
+                android:layout_width="180dip"
+                android:text="@string/EditDel" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginLeft="130dip"
+            android:layout_marginRight="50dip"
+            android:contentDescription="@string/appName"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/hor_line" />
+
+        <ListView
+            android:id="@+id/lv_channel_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dip"
+            android:layout_marginRight="50dip"
+            android:fadingEdgeLength="0dip"
+            android:listSelector="@drawable/item_email" >
+        </ListView>
+
+        <requestFocus />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginRight="30dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:contentDescription="@string/appName"
+            style="@style/RemindImage"
+            android:background="@drawable/button_red" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/EditFav" />
+
+        <ImageView
+            android:contentDescription="@string/appName"
+            style="@style/RemindImage"
+            android:background="@drawable/button_green" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/EditDelAll" />
+
+        <ImageView
+            android:contentDescription="@string/appName"
+            style="@style/RemindImage"
+            android:background="@drawable/button_gold" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/EditLock" />
+
+        <ImageView
+            android:contentDescription="@string/appName"
+            style="@style/RemindImage"
+            android:background="@drawable/button_blue" />
+
+        <TextView
+            style="@style/RemindText"
+            android:text="@string/EditDel" />
+    </LinearLayout>
+
+</RelativeLayout>

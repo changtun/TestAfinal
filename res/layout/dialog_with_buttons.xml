@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="500dip"
+    android:layout_height="250dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_gravity="center"
+        android:background="@drawable/list_tit_bg"
+        android:gravity="center"
+        android:paddingLeft="20dip"
+        android:text="@string/password_title"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/list_lang_bg"
+        android:orientation="vertical"
+        android:paddingBottom="15dip" >
+
+        <TextView
+            android:id="@+id/tv_dialog_notice"
+            style="@style/Medium"
+            android:layout_width="fill_parent"
+            android:layout_height="150dip"
+            android:gravity="center"
+            android:text="@string/viewing_level_control"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_search_ok"
+                style="@style/Small"
+                android:layout_width="120dip"
+                android:layout_height="45dip"
+                android:background="@drawable/button_search_selector"
+                android:focusable="true"
+                android:gravity="center"
+                android:focusableInTouchMode="true"
+                android:text="@string/OK"
+                android:textColor="@drawable/white" />
+
+            <Button
+                android:id="@+id/bt_search_cancel"
+                style="@style/Small"
+                android:layout_width="120dip"
+                android:layout_height="45dip"
+                android:layout_marginLeft="100dip"
+                android:background="@drawable/button_search_selector"
+                android:gravity="center"
+                android:text="@string/Cancel"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

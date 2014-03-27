@@ -1,0 +1,19 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := libcurl.so
+LOCAL_MODULE := libcurl
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_TAGS := optional 
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT) 
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := libcurl.a
+LOCAL_MODULE := libcurl
+LOCAL_MODULE_CLASS := STATIC_LIBRARIES
+LOCAL_MODULE_TAGS := optional 
+LOCAL_MODULE_SUFFIX := .a
+include $(BUILD_PREBUILT) 
