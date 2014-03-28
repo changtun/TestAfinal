@@ -1,51 +1,36 @@
 /*
- * 文 件 名:  TPInfoBean.java
- * 版    权:  PBI Technologies Co., Ltd. Copyright YYYY-YYYY,  All rights reserved
- * 描    述:  <描述>
- * 修 改 人:  gtsong
- * 修改时间:  2012-10-29
- * 跟踪单号:  <跟踪单号>
- * 修改单号:  <修改单号>
- * 修改内容:  <修改内容>
+ * File Name:  ServiceInfoBean.java
+ * Copyright:  Beijing Jaeger Communication Electronic Technology Co., Ltd. Copyright YYYY-YYYY,  All rights reserved
+ * Descriptions:  <Descriptions>
+ * Changed By:  gtsong
+ * Changed Time:  2014-01-08
+ * Changed Content:  <Changed Content>
  */
 package com.pbi.dvb.domain;
 
-/**
- * 
- * <TP Entity>
- * 
- * @author gtsong
- * @version [版本号, 2012-7-19]
- * @see [相关类/方法]
- * @since [产品/模块版本]
- */
+import net.tsz.afinal.annotation.sqlite.Table;
+
+@Table(name = "db_tp_info_table")
 public class TPInfoBean
 {
-    // 频点id
+    private int id;
+    
     private Integer tpId;
     
-    // tuner类型
     private int tunerType;
     
-    // tunerId
     private char tunerId;
     
-    // 网络id
     private Integer netId;
     
-    // 原始网络id
     private Integer originalNetId;
     
-    // 传输流id
     private Integer tranStreamId;
     
-    // tuner频率
     private Integer tunerFreq;
     
-    // tuner的符码率
     private Integer tunerSymbRate;
     
-    // tuner的调试方式
     private int tunerEmod;
     
     private Integer efecInner;
@@ -72,6 +57,26 @@ public class TPInfoBean
         this.tunerSymbRate = tunerSymbRate;
         this.tunerEmod = tunerEmod;
         this.efecInner = efecInner;
+        this.efecOuter = efecOuter;
+    }
+    
+    public int getId()
+    {
+        return id;
+    }
+    
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+    
+    public void setEfecInner(Integer efecInner)
+    {
+        this.efecInner = efecInner;
+    }
+    
+    public void setEfecOuter(Integer efecOuter)
+    {
         this.efecOuter = efecOuter;
     }
     

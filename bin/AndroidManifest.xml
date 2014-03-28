@@ -22,6 +22,7 @@
     <!-- android:name=".global.CrashApplication" -->
 
     <application
+        android:name="com.pbi.dvb.DVBApp"
         android:hardwareAccelerated="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/appName"
@@ -67,6 +68,7 @@
         <activity android:name=".DVBConfigActivity" />
         <activity android:name=".SearchFreqSettings" />
         <activity android:name=".BootDefaultServiceActivity" />
+        <activity android:name=".BaseActivity" />
         <activity
             android:name=".TVChannelEdit"
             android:clearTaskOnLaunch="true"

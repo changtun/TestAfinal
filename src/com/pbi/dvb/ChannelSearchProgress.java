@@ -15,7 +15,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentProviderOperation;
@@ -58,47 +57,76 @@ import com.pbi.dvb.utils.LogUtils;
 import com.pbi.dvb.utils.ServiceSort;
 import com.pbi.dvb.view.CustomProgressDialog;
 
-public class ChannelSearchProgress extends Activity
+public class ChannelSearchProgress extends BaseActivity
 {
     private static final String TAG = "ChannelSearchProgress";
+    
     private Dialog cDialog;
+    
     private TextView tvAllPrograms;
+    
     private TextView tvTVprograms;
+    
     private TextView tvRadioPrograms;
+    
     private TextView tvSearchProgress;
+    
     private TextView tvInputFrequency;
+    
     private TextView tvSymbolRate;
+    
     private TextView tvQam;
+    
     private TextView tvStrength;
+    
     private TextView tvQuality;
+    
     private ListView lvTVPrograms;
+    
     private ListView lvRadioPrograms;
+    
     private ProgressBar pbSearchProgress;
+    
     private ProgressBar pbProgressQuality;
+    
     private ProgressBar pbProgressStrength;
+    
     private String strInputFrequency;
+    
     private String strSymbolRate;
+    
     private String strQam;
+    
     private int searchMode;
+    
     private boolean hasBat;
     
     private MessageInstallation msgInstall;
+    
     private NativeInstallation dvb;
+    
     private NativeInstallation.Install_Search_Result_t searchResult;
+    
     private ScheduledExecutorService newScheduledThreadPool;
+    
     private CustomProgressDialog pdSaveProgram;
     
     private List<String> tvNames;
+    
     private List<String> radioNames;
     
     private int allCount = 0;
+    
     private int tvCount = 0;
+    
     private int radioCount = 0;
     
     private int u32Freq;
+    
     private int u32SymbRate;
     
     private SearchProgressAdapter tvAdapter;
+    
     private SearchProgressAdapter radioAdapter;
     
     private Handler handler = new Handler()
@@ -188,7 +216,8 @@ public class ChannelSearchProgress extends Activity
                     }
                     
                     // auto search
-                    if (searchMode == Config.Install_Search_Type_eAUTO_SEARCH || searchMode == Config.Install_Search_Type_eALL_SEARCH)
+                    if (searchMode == Config.Install_Search_Type_eAUTO_SEARCH
+                        || searchMode == Config.Install_Search_Type_eALL_SEARCH)
                     {
                         if (serviceType == Config.SERVICE_TYPE_TV)
                         {
@@ -495,9 +524,10 @@ public class ChannelSearchProgress extends Activity
     {
         List<TPInfoBean> tpInfoInSearchResult = getTpInfoInSearchResult(searchResult);
         
-        if (searchMode == Config.Install_Search_Type_eAUTO_SEARCH || searchMode == Config.Install_Search_Type_eALL_SEARCH)
+        if (searchMode == Config.Install_Search_Type_eAUTO_SEARCH
+            || searchMode == Config.Install_Search_Type_eALL_SEARCH)
         {
-            //clear db.
+            // clear db.
             TpInfoDao tpInfoDao = new TpInfoDaoImpl(this);
             ServiceInfoDao serviceInfoDao = new ServiceInfoDaoImpl(this);
             serviceInfoDao.clearService();
@@ -532,6 +562,41 @@ public class ChannelSearchProgress extends Activity
         }
     }
     
+    private void saveTpInfoDataWithAfinal()
+    {
+        List<TPInfoBean> tpInfoInSearchResult = getTpInfoInSearchResult(searchResult);
+        // auto search or all search,clear db.
+        if (searchMode == Config.Install_Search_Type_eAUTO_SEARCH
+            || searchMode == Config.Install_Search_Type_eALL_SEARCH)
+        {
+            db.deleteAll(TPInfoBean.class);
+            db.deleteAll(ServiceInfoBean.class);
+        }
+        if (null != tpInfoInSearchResult)
+        {
+            for (TPInfoBean tpInfoBean : tpInfoInSearchResult)
+            {
+                //check tp exist or not.
+                List<TPInfoBean> list =
+                    db.findAllByWhere(TPInfoBean.class,
+                        "tunerFreq = " + tpInfoBean.getTunerFreq() + " and tunerSymbrate = "
+                            + tpInfoBean.getTunerSymbRate() + " and tunerEmod = " + tpInfoBean.getTunerEmod() + ";");
+                if (list.size()!=0)
+                {
+                    db.update(tpInfoBean, " tpId = " + list.get(0).getTpId());
+                    return;
+                }
+                db.save(tpInfoBean);
+            }
+        }
+        else
+        {
+            Message message = new Message();
+            message.what = Config.AUTO_SEARCH_FAILED;
+            handler.sendMessage(message);
+        }
+    }
+    
     /**
      * <save service information>
      * 
@@ -548,10 +613,10 @@ public class ChannelSearchProgress extends Activity
         {
             TpInfoDao tpInfoDao = new TpInfoDaoImpl(this);
             ServiceInfoDao serviceInfoDao = new ServiceInfoDaoImpl(this);
-
+            
             if (searchMode == Config.Install_Search_Type_eAUTO_SEARCH)
             {
-                //update nit version.
+                // update nit version.
                 MessageNit messageNit = new MessageNit();
                 Nativenit nativenit = new Nativenit();
                 nativenit.NitMessageInit(messageNit);
@@ -587,18 +652,6 @@ public class ChannelSearchProgress extends Activity
                         }
                     }
                     
-                    // if (serviceType == Config.SERVICE_TYPE_TV || serviceType == Config.SERVICE_TYPE_RADIO)
-                    // {
-                    // serviceName = serviceInfoBean.getChannelName();
-                    //
-                    // // Treatment of name is empty.
-                    // if (null == serviceName || "".equals(serviceName))
-                    // {
-                    // serviceName = "SDT:" + serviceInfoBean.getServiceId();
-                    // serviceInfoBean.setChannelName(serviceName);
-                    // Log.i(TAG, "------channel name is null !!!------->>>" + serviceName);
-                    // }
-                    // }
                     newServiceList.add(serviceInfoBean);
                 }
             }
@@ -682,14 +735,135 @@ public class ChannelSearchProgress extends Activity
         
     }
     
-//    public boolean onKeyDown(int keyCode, KeyEvent event)
-//    {
-//        if (keyCode == KeyEvent.KEYCODE_BACK)
-//        {
-//            return true;
-//        }
-//        return false;
-//    }
+    public void saveServiceInfoDataWithAfinal()
+    {
+        List<ServiceInfoBean> serviceInfoInSearchResult = getServiceInfoInSearchResult(searchResult);
+        List<ServiceInfoBean> newServiceList = new ArrayList<ServiceInfoBean>();
+        List<ServiceInfoBean> curServiceList = new ArrayList<ServiceInfoBean>();
+        // String serviceName;
+        
+        if (null != serviceInfoInSearchResult)
+        {
+            // auto search record nit code.
+            if (searchMode == Config.Install_Search_Type_eAUTO_SEARCH)
+            {
+                // update nit version.
+                MessageNit messageNit = new MessageNit();
+                Nativenit nativenit = new Nativenit();
+                nativenit.NitMessageInit(messageNit);
+                Editor edit = getSharedPreferences("dvb_nit", 8).edit();
+                int nitVersion = messageNit.nitSearchVer();
+                Log.i(TAG, "--->>>the nit version is: " + nitVersion);
+                edit.putInt("version_code", nitVersion);
+                edit.commit();
+                nativenit.NitMessageUnint();
+            }
+            
+            for (ServiceInfoBean serviceInfoBean : serviceInfoInSearchResult)
+            {
+                //check tp exist or not.
+                List<TPInfoBean> list =
+                    db.findAllByWhere(TPInfoBean.class,
+                        "tunerFreq = " + serviceInfoBean.getTpInfoBean().getTunerFreq() + " and tunerSymbrate = "
+                            + serviceInfoBean.getTpInfoBean().getTunerSymbRate() + " and tunerEmod = " + serviceInfoBean.getTpInfoBean().getTunerEmod() + ";");
+                
+                // tp has existed.
+                if(null !=list)
+                {
+                    serviceInfoBean.setTpId(list.get(0).getTpId());
+                    // get service type.
+                    char serviceType = serviceInfoBean.getServiceType();
+                    
+                    // manual search,no type service looks as tv type.
+                    if (searchMode == Config.Install_Search_Type_eTP_SEARCH)
+                    {
+                        if (serviceType == Config.SERVICE_TYPE_NOTYPE)
+                        {
+                            // change the unknown service name to tv.
+                            serviceType = Config.SERVICE_TYPE_TV;
+                            serviceInfoBean.setServiceType(serviceType);
+                        }
+                    }
+                    
+                    newServiceList.add(serviceInfoBean);
+                }
+            }
+            
+            // processing the searched collections.
+            if (null != newServiceList || newServiceList.size() != 0)
+            {
+                List<ServiceInfoBean> oriServiceList = db.findAll(ServiceInfoBean.class);
+                if (oriServiceList.size() != 0)
+                {
+                    for (ServiceInfoBean oriBean : oriServiceList)
+                    {
+                        int oriServiceId = oriBean.getServiceId();
+                        int oriTpId = oriBean.getTpId();
+                        
+                        // wheather the new search programme exist or not.
+                        boolean isExist = false;
+                        
+                        for (ServiceInfoBean newBean : newServiceList)
+                        {
+                            // The programme has already existed.
+                            if (oriServiceId == newBean.getServiceId() && oriTpId == newBean.getTpId())
+                            {
+                                isExist = true;
+                                
+                                // Recovery the original settings.
+                                newBean.setFavFlag(oriBean.getFavFlag());
+                                newBean.setLockFlag(oriBean.getLockFlag());
+                            }
+                        }
+                        
+                        // 数据库中原有的，新搜索时没搜到的节目
+                        if (!isExist)
+                        {
+                            curServiceList.add(oriBean);
+                        }
+                    }
+                }
+                // 数据库中没有节目时
+                for (ServiceInfoBean serviceInfoBean : newServiceList)
+                {
+                    if (serviceInfoBean.getLogicalNumber() < 65535)
+                    {
+                        curServiceList.add(serviceInfoBean);
+                    }
+                }
+                
+                // sort the services.
+                Collections.sort(curServiceList, new ServiceSort());
+
+                // save the services.
+                db.deleteAll(ServiceInfoBean.class);
+                for (ServiceInfoBean sBean:curServiceList)
+                {
+                    db.save(sBean);
+                }
+            }
+        }
+        else
+        {
+            Message message = new Message();
+            message.what = Config.AUTO_SEARCH_FAILED;
+            handler.sendMessage(message);
+        }
+        
+        // clear data.
+        serviceInfoInSearchResult = null;
+        newServiceList = null;
+        curServiceList = null;
+    }
+    
+    // public boolean onKeyDown(int keyCode, KeyEvent event)
+    // {
+    // if (keyCode == KeyEvent.KEYCODE_BACK)
+    // {
+    // return true;
+    // }
+    // return false;
+    // }
     
     /**
      * 
@@ -718,8 +892,10 @@ public class ChannelSearchProgress extends Activity
         protected Void doInBackground(Void... params)
         {
             dvb.installationGetSearchRet(searchResult);
-            saveTpInfoData();
-            saveServiceInfoData();
+            // saveTpInfoData();
+            saveTpInfoDataWithAfinal();
+//            saveServiceInfoData();
+            saveServiceInfoDataWithAfinal();
             
             dvb.installationDeinit();
             newScheduledThreadPool.shutdownNow();
@@ -735,34 +911,38 @@ public class ChannelSearchProgress extends Activity
     
     public void processDialog()
     {
-        if(null == cDialog)
+        if (null == cDialog)
         {
-            cDialog = DialogUtils.twoButtonsDialogCreate(ChannelSearchProgress.this, getString(R.string.searchNotice), new OnClickListener()
-            {
-                
-                @Override
-                public void onClick(View v)
-                {
-                    if (null != cDialog)
+            cDialog =
+                DialogUtils.twoButtonsDialogCreate(ChannelSearchProgress.this,
+                    getString(R.string.searchNotice),
+                    new OnClickListener()
                     {
-                        cDialog.dismiss();
-                    }
-                    finish();
-//                    CommonUtils.skipActivity(ChannelSearchProgress.this, TVChannelSearch.class, -1);
-                }
-            }, new OnClickListener()
-            {
-                
-                @Override
-                public void onClick(View v)
-                {
-                    if (null != cDialog)
+                        
+                        @Override
+                        public void onClick(View v)
+                        {
+                            if (null != cDialog)
+                            {
+                                cDialog.dismiss();
+                            }
+                            finish();
+                            // CommonUtils.skipActivity(ChannelSearchProgress.this, TVChannelSearch.class, -1);
+                        }
+                    },
+                    new OnClickListener()
                     {
-                        cDialog.dismiss();
-                    }
-                    finish();
-                }
-            });
+                        
+                        @Override
+                        public void onClick(View v)
+                        {
+                            if (null != cDialog)
+                            {
+                                cDialog.dismiss();
+                            }
+                            finish();
+                        }
+                    });
         }
     }
     
@@ -804,6 +984,7 @@ public class ChannelSearchProgress extends Activity
                 tpInfoBean.setEfecInner(fec_Inner);
                 tpInfoBean.setEfecOuter(fec_Outer);
                 
+                tpInfoBean.setTpId(i);
                 tpInfoBeans.add(tpInfoBean);
             }
         }

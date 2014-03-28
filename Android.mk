@@ -1,7 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_STATIC_JAVA_LIBRARIES := servlet-api
+LOCAL_STATIC_JAVA_LIBRARIES := servlet-api afinal
 
 LOCAL_MODULE_TAGS := optional
 
@@ -15,7 +15,7 @@ include $(BUILD_PACKAGE)
 
 include $(CLEAR_VARS)
 
-LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := servlet-api:libs/servlet-api.jar
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := servlet-api:libs/servlet-api.jar afinal:libs/afinal.jar
 
 include $(BUILD_MULTI_PREBUILT)
 
